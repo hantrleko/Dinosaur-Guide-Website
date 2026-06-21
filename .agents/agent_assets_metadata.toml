@@ -1,0 +1,128 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "JYwWCicDGugK3C-9-z1pb"
+uri = "file://artifacts/dino-pedia/public/dinos/tyrannosaurus-rex.png"
+type = "image"
+title = "T. rex side profile"
+
+[[generated]]
+id = "YM3rkiPnfx02JcBuzPsaX"
+uri = "file://artifacts/dino-pedia/public/dinos/velociraptor.png"
+type = "image"
+title = "Velociraptor side profile"
+
+[[generated]]
+id = "gP_WceUV6H96eZuvCQ8rn"
+uri = "file://artifacts/dino-pedia/public/dinos/brachiosaurus.png"
+type = "image"
+title = "Brachiosaurus side profile"
+
+[[generated]]
+id = "1uwqO5j4UrFNGx35ArKrJ"
+uri = "file://artifacts/dino-pedia/public/dinos/triceratops.png"
+type = "image"
+title = "Triceratops side profile"
+
+[[generated]]
+id = "h-7ck25_carCGj527QatA"
+uri = "file://artifacts/dino-pedia/public/dinos/stegosaurus.png"
+type = "image"
+title = "Stegosaurus side profile"
+
+[[generated]]
+id = "-PUN-3qi_QTkALwnmfm-k"
+uri = "file://artifacts/dino-pedia/public/dinos/ankylosaurus.png"
+type = "image"
+title = "Ankylosaurus side profile"
+
+[[generated]]
+id = "-Q4BbQYuB9Ic_vcKDImiK"
+uri = "file://artifacts/dino-pedia/public/dinos/parasaurolophus.png"
+type = "image"
+title = "Parasaurolophus side profile"
+
+[[generated]]
+id = "dNAwyiBget0yOyc7pqr58"
+uri = "file://artifacts/dino-pedia/public/dinos/pteranodon.png"
+type = "image"
+title = "Pteranodon side profile"
+
+[[generated]]
+id = "4mipf6qDu434dBQQrIlFF"
+uri = "file://artifacts/dino-pedia/public/dinos/mosasaurus.png"
+type = "image"
+title = "Mosasaurus side profile"
+
+[[generated]]
+id = "dsw6KuyukBnZ_v_JIDlC2"
+uri = "file://artifacts/dino-pedia/public/dinos/ichthyosaurus.png"
+type = "image"
+title = "Ichthyosaurus side profile"
+
+[[generated]]
+id = "MGJhyQ3GrC6mwe1RBgmq7"
+uri = "file://artifacts/dino-pedia/public/dinos/iguanodon.png"
+type = "image"
+title = "Iguanodon side profile"
+
+[[generated]]
+id = "N3HlZOK13beYFQjOPITKo"
+uri = "file://artifacts/dino-pedia/public/dinos/spinosaurus.png"
+type = "image"
+title = "Spinosaurus side profile"
+
+[[generated]]
+id = "Px97983xPzqAmRZNSYFRg"
+uri = "file://artifacts/dino-pedia/public/dinos/allosaurus.png"
+type = "image"
+title = "Allosaurus side profile"
+
+[[generated]]
+id = "ie0fqz5qp9bcInPiVXVJW"
+uri = "file://artifacts/dino-pedia/public/dinos/diplodocus.png"
+type = "image"
+title = "Diplodocus side profile"
+
+[[generated]]
+id = "7rfDSrvf9Zg6lVMJkKiaL"
+uri = "file://artifacts/dino-pedia/public/dinos/pachycephalosaurus.png"
+type = "image"
+title = "Pachycephalosaurus side profile"
+
+[[generated]]
+id = "ldrjn_gXqPvVFWfqYx_VO"
+uri = "file://artifacts/dino-pedia/public/dinos/mamenchisaurus.png"
+type = "image"
+title = "Mamenchisaurus side profile"
+
+[[generated]]
+id = "gsHvGeeSwUtUPRMc4Lpvs"
+uri = "file://artifacts/dino-pedia/public/dinos/protoceratops.png"
+type = "image"
+title = "Protoceratops side profile"
+
+[[generated]]
+id = "5YV9PFBYr0owYquLHKuYn"
+uri = "file://artifacts/dino-pedia/public/dinos/ornithomimus.png"
+type = "image"
+title = "Ornithomimus side profile"
+
+[[generated]]
+id = "7sZ_7Dy4ThYnm6Tibl1hk"
+uri = "file://artifacts/dino-pedia/public/dinos/ceratosaurus.png"
+type = "image"
+title = "Ceratosaurus side profile"
+
+[[generated]]
+id = "u7JiHx6vaEPH9spIbrpjd"
+uri = "file://artifacts/dino-pedia/public/dinos/giganotosaurus.png"
+type = "image"
+title = "Giganotosaurus side profile"
+
+[[generated]]
+id = "mFznx85VNNzxmKHGA7Rtl"
+uri = "file://artifacts/dino-pedia/public/hero-bg.png"
+type = "image"
+title = "Prehistoric landscape hero"

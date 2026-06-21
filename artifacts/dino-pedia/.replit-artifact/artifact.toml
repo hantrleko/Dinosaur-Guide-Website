@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "恐龙大全"
+version = "1.0.0"
+id = "artifacts/dino-pedia"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19651
+
+[services.development]
+run = "pnpm --filter @workspace/dino-pedia run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/dino-pedia", "run", "build" ]
+publicDir = "artifacts/dino-pedia/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19651"
+BASE_PATH = "/"
