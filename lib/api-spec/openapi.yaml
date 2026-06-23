@@ -10,6 +10,10 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: dinos
+    description: Dinosaur data operations
+  - name: media
+    description: Multimedia generation operations
 paths:
   /healthz:
     get:
@@ -24,6 +28,204 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /dinos:
+    get:
+      operationId: getDinos
+      tags: [dinos]
+      summary: List dinosaurs
+      description: Get dinosaur directory data for list/overview pages.
+      responses:
+        "200":
+          description: Dinosaur list
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DinoListResponse"
+  /dinos/{id}:
+    get:
+      operationId: getDinoById
+      tags: [dinos]
+      summary: Get dinosaur detail
+      description: Get a dinosaur by its front-end ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            $ref: "#/components/schemas/DinoId"
+      responses:
+        "200":
+          description: Dinosaur detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Dinosaur"
+        "404":
+          description: Dino not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /media/voice:
+    post:
+      operationId: createVoiceJob
+      tags: [media]
+      summary: Generate narration job
+      description: Submit a text-to-speech generation task.
+      parameters:
+        - in: header
+          name: idempotency-key
+          required: false
+          schema:
+            type: string
+            description: 幂等键（同一请求可复用同一个任务）
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/VoiceGenerationRequest"
+      responses:
+        "202":
+          description: Job accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MediaVoiceJob"
+        "400":
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /media/voice/{jobId}:
+    get:
+      operationId: getVoiceJob
+      tags: [media]
+      summary: Get narration job status
+      parameters:
+        - in: path
+          name: jobId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Job status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MediaVoiceJob"
+        "404":
+          description: Job not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /media/deck:
+    post:
+      operationId: createDeckJob
+      tags: [media]
+      summary: Generate deck/job assets
+      description: Generate visual deck summary via Gamma / Canva provider chain.
+      parameters:
+        - in: header
+          name: idempotency-key
+          required: false
+          schema:
+            type: string
+            description: 幂等键（同一请求可复用同一个任务）
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DeckGenerationRequest"
+      responses:
+        "202":
+          description: Job accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MediaDeckJob"
+        "400":
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /media/deck/{jobId}:
+    get:
+      operationId: getDeckJob
+      tags: [media]
+      summary: Get deck job status
+      parameters:
+        - in: path
+          name: jobId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Job status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MediaDeckJob"
+        "404":
+          description: Job not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /media/jobs:
+    get:
+      operationId: listMediaJobs
+      tags: [media]
+      summary: List media jobs
+      description: Query voice/deck generation jobs for resume and status visibility.
+      parameters:
+        - in: query
+          name: type
+          required: false
+          schema:
+            $ref: "#/components/schemas/MediaJobType"
+        - in: query
+          name: dinoId
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: status
+          required: false
+          schema:
+            $ref: "#/components/schemas/MediaJobStatus"
+        - in: query
+          name: limit
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 200
+      responses:
+        "200":
+          description: Job list
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MediaJobListResponse"
+  /voices:
+    get:
+      operationId: getVoices
+      tags: [media]
+      summary: List speech voices
+      responses:
+        "200":
+          description: Voice catalog
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VoiceCatalogResponse"
 components:
   schemas:
     HealthStatus:
@@ -34,3 +236,381 @@ components:
       required:
         - status
 
+    ErrorResponse:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        details:
+          type: object
+          additionalProperties: true
+      required:
+        - code
+        - message
+
+    DinoId:
+      type: string
+
+    DinoEra:
+      type: string
+      enum: [三叠纪, 侏罗纪, 白垩纪]
+
+    DinoDiet:
+      type: string
+      enum: [肉食, 草食, 杂食]
+
+    Dinosaur:
+      type: object
+      properties:
+        id:
+          type: string
+        nameCn:
+          type: string
+        nameLatin:
+          type: string
+        era:
+          $ref: "#/components/schemas/DinoEra"
+        diet:
+          $ref: "#/components/schemas/DinoDiet"
+        lengthM:
+          type: number
+          format: float
+        weightTons:
+          type: number
+          format: float
+        region:
+          type: string
+        description:
+          type: string
+        funFact:
+          type: string
+        imageUrl:
+          type: string
+      required:
+        - id
+        - nameCn
+        - nameLatin
+        - era
+        - diet
+        - lengthM
+        - weightTons
+        - region
+        - description
+        - funFact
+        - imageUrl
+
+    DinoListResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/Dinosaur"
+      required:
+        - items
+
+    VoiceCatalogItem:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        gender:
+          type: string
+          nullable: true
+        language:
+          type: string
+        provider:
+          type: string
+      required:
+        - id
+        - name
+        - language
+        - provider
+
+    VoiceCatalogResponse:
+      type: object
+      properties:
+        voices:
+          type: array
+          items:
+            $ref: "#/components/schemas/VoiceCatalogItem"
+      required:
+        - voices
+
+    MediaJobStatus:
+      type: string
+      enum: [queued, running, completed, failed]
+
+    MediaJobType:
+      type: string
+      enum: [voice, deck]
+
+    MediaJobSummary:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          $ref: "#/components/schemas/MediaJobType"
+        status:
+          $ref: "#/components/schemas/MediaJobStatus"
+        progress:
+          type: integer
+          minimum: 0
+          maximum: 100
+        dinoId:
+          type: string
+          nullable: true
+        provider:
+          type: string
+          nullable: true
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        errorCode:
+          type: string
+        errorMessage:
+          type: string
+      required:
+        - id
+        - type
+        - status
+        - progress
+        - createdAt
+        - updatedAt
+
+    MediaJobListResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/MediaJobSummary"
+      required:
+        - items
+
+    SubtitleCue:
+      type: object
+      properties:
+        startMs:
+          type: integer
+        endMs:
+          type: integer
+        text:
+          type: string
+      required:
+        - startMs
+        - endMs
+        - text
+
+    DeckSection:
+      type: object
+      properties:
+        title:
+          type: string
+        facts:
+          type: array
+          items:
+            type: string
+      required:
+        - title
+        - facts
+
+    DeckSummary:
+      type: object
+      properties:
+        title:
+          type: string
+        sections:
+          type: array
+          items:
+            $ref: "#/components/schemas/DeckSection"
+      required:
+        - title
+        - sections
+
+    VoiceGenerationRequest:
+      type: object
+      properties:
+        dinoId:
+          type: string
+          nullable: true
+        script:
+          type: string
+          minLength: 20
+          maxLength: 4000
+        voiceId:
+          type: string
+        speed:
+          type: number
+          minimum: 0.6
+          maximum: 2
+        provider:
+          type: string
+          description: 优先供应商（可选）
+      required:
+        - script
+
+    DeckGenerationRequest:
+      type: object
+      properties:
+        dinoId:
+          type: string
+          nullable: true
+        content:
+          type: string
+          minLength: 30
+          maxLength: 5000
+        style:
+          type: string
+          description: 风格参数
+        provider:
+          type: string
+          description: 优先供应商（可选）
+      required:
+        - content
+
+    VoiceJobAsset:
+      type: object
+      properties:
+        provider:
+          type: string
+        kind:
+          type: string
+          enum: [voice]
+        audioUrl:
+          type: string
+        transcript:
+          type: string
+        subtitles:
+          type: array
+          items:
+            $ref: "#/components/schemas/SubtitleCue"
+        durationMs:
+          type: integer
+      required:
+        - provider
+        - kind
+        - audioUrl
+        - transcript
+
+    DeckJobAsset:
+      type: object
+      properties:
+        provider:
+          type: string
+        kind:
+          type: string
+          enum: [deck]
+        title:
+          type: string
+        previewUrl:
+          type: string
+        shareUrl:
+          type: string
+        canvaEditableUrl:
+          type: string
+        importText:
+          type: string
+        summary:
+          $ref: "#/components/schemas/DeckSummary"
+      required:
+        - provider
+        - kind
+        - title
+        - previewUrl
+
+    MediaVoiceJob:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          $ref: "#/components/schemas/MediaJobType"
+        status:
+          $ref: "#/components/schemas/MediaJobStatus"
+        progress:
+          type: integer
+          minimum: 0
+          maximum: 100
+        dinoId:
+          type: string
+          nullable: true
+        provider:
+          type: string
+          nullable: true
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        errorCode:
+          type: string
+        errorMessage:
+          type: string
+        request:
+          $ref: "#/components/schemas/VoiceGenerationRequest"
+        asset:
+          oneOf:
+            - $ref: "#/components/schemas/VoiceJobAsset"
+          nullable: true
+      required:
+        - id
+        - type
+        - status
+        - progress
+        - createdAt
+        - updatedAt
+        - request
+
+    MediaDeckJob:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          $ref: "#/components/schemas/MediaJobType"
+        status:
+          $ref: "#/components/schemas/MediaJobStatus"
+        progress:
+          type: integer
+          minimum: 0
+          maximum: 100
+        dinoId:
+          type: string
+          nullable: true
+        provider:
+          type: string
+          nullable: true
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        errorCode:
+          type: string
+        errorMessage:
+          type: string
+        request:
+          $ref: "#/components/schemas/DeckGenerationRequest"
+        asset:
+          oneOf:
+            - $ref: "#/components/schemas/DeckJobAsset"
+          nullable: true
+      required:
+        - id
+        - type
+        - status
+        - progress
+        - createdAt
+        - updatedAt
+        - request
