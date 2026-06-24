@@ -91,7 +91,7 @@ export default function Home() {
       const matchesFavorite = !favoriteOnly || favoriteIds.includes(dino.id);
       return matchesSearch && matchesEra && matchesDiet && matchesFavorite;
     });
-  }, [dinosSource, search, selectedEra, selectedDiet, favoriteOnly, favoriteIds]);
+  }, [dinosaursSource, search, selectedEra, selectedDiet, favoriteOnly, favoriteIds]);
 
   const handleToggleFavorite = useCallback((dinoId: string) => {
     setFavoriteIds((previous) => {
