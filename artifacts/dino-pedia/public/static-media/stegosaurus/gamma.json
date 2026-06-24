@@ -1,11 +1,34 @@
 {
-  "generationId": "NrrEnb56h3V7Ib6giyt7F",
-  "status": "completed",
-  "gammaId": "g_ti5t9v7mc85j9um",
-  "gammaUrl": "https://gamma.app/docs/upnzuog8alnt7ac",
-  "exportUrl": "https://assets.api.gamma.app/export/pdf/upnzuog8alnt7ac/17a59d8578fffed22761748043d2e1d6/Stegosaurus.pdf",
-  "credits": {
-    "deducted": 60,
-    "remaining": 7689
+  "status": "skipped",
+  "provider": "demo",
+  "reason": "GAMMA_API_KEY is not set",
+  "content": "剑龙（Stegosaurus）\n时代：侏罗纪\n食性：草食\n体长：9米\n体重：5.3吨\n分布：北美洲\n简介：剑龙因其背上一排巨大的骨板和尾部的四根尖刺而闻名。虽然体型巨大，但它们的头部非常小，大脑容量仅相当于一个核桃。\n趣味：剑龙尾部的尖刺在古生物学中被称为“Thagomizer”，这个名字来源于一部漫画。",
+  "summary": {
+    "title": "剑龙 展示页",
+    "sections": [
+      {
+        "title": "核心参数",
+        "facts": [
+          "侏罗纪 · 草食",
+          "体长约 9 米，体重约 5.3 吨",
+          "主要分布：北美洲"
+        ]
+      },
+      {
+        "title": "视觉建议",
+        "facts": [
+          "体型对比图",
+          "时代时间线",
+          "栖息地背景"
+        ]
+      },
+      {
+        "title": "讲述重点",
+        "facts": [
+          "剑龙因其背上一排巨大的骨板和尾部的四根尖刺而闻名。虽然体型巨大，但它们的头部非常小，大脑容量仅相当于一个核桃。",
+          "剑龙尾部的尖刺在古生物学中被称为“Thagomizer”，这个名字来源于一部漫画。"
+        ]
+      }
+    ]
   }
 }

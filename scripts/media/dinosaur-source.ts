@@ -60,6 +60,15 @@ export function buildNarrationScript(dino: DinoInput) {
   ].join(" ");
 }
 
+export function buildDinoVoiceScript(dino: DinoInput) {
+  return [
+    `注意：我是一只${dino.nameCn}， ${dino.nameLatin}。`,
+    `我栖息于${dino.era}，来自${dino.region}，属于${dino.diet}类型。`,
+    `体长${dino.lengthM}米，体重${dino.weightTons}吨。`,
+    "咆哮吧！",
+  ].join(" ");
+}
+
 export function buildDeckContent(dino: DinoInput) {
   return [
     `${dino.nameCn}（${dino.nameLatin}）`,

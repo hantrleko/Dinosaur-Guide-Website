@@ -1,11 +1,34 @@
 {
-  "generationId": "R5Rro4T6IsOMUNGbb3pwz",
-  "status": "completed",
-  "gammaId": "g_3dewpemyu29h92p",
-  "gammaUrl": "https://gamma.app/docs/f7fgsykrqe3ji9z",
-  "exportUrl": "https://assets.api.gamma.app/export/pdf/f7fgsykrqe3ji9z/a8a7858f173bf52ad29868c0097507cf/Spinosaurus.pdf",
-  "credits": {
-    "deducted": 60,
-    "remaining": 7629
+  "status": "skipped",
+  "provider": "demo",
+  "reason": "GAMMA_API_KEY is not set",
+  "content": "棘龙（Spinosaurus）\n时代：白垩纪\n食性：肉食\n体长：15米\n体重：7吨\n分布：非洲\n简介：棘龙是已知体型最大的肉食性恐龙，比霸王龙还要长。背上有一个巨大的帆状物，并且拥有类似鳄鱼的长吻，高度适应半水生生活。\n趣味：棘龙是目前已知唯一能在水中自如游动的大型肉食性恐龙。",
+  "summary": {
+    "title": "棘龙 展示页",
+    "sections": [
+      {
+        "title": "核心参数",
+        "facts": [
+          "白垩纪 · 肉食",
+          "体长约 15 米，体重约 7 吨",
+          "主要分布：非洲"
+        ]
+      },
+      {
+        "title": "视觉建议",
+        "facts": [
+          "体型对比图",
+          "时代时间线",
+          "栖息地背景"
+        ]
+      },
+      {
+        "title": "讲述重点",
+        "facts": [
+          "棘龙是已知体型最大的肉食性恐龙，比霸王龙还要长。背上有一个巨大的帆状物，并且拥有类似鳄鱼的长吻，高度适应半水生生活。",
+          "棘龙是目前已知唯一能在水中自如游动的大型肉食性恐龙。"
+        ]
+      }
+    ]
   }
 }

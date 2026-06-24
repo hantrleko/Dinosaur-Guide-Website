@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-24T03:47:23.246Z",
-  "source": "static-media-v1",
+  "generatedAt": "2026-06-24T04:08:38.064Z",
+  "source": "static-media-v2",
   "defaultDinoIds": [
     "tyrannosaurus-rex",
     "velociraptor",
@@ -15,8 +15,10 @@
       "nameCn": "霸王龙",
       "manifestUrl": "/static-media/tyrannosaurus-rex/manifest.json",
       "hasNarration": true,
+      "hasDinoVoice": true,
       "hasDeck": true,
       "hasCanva": true,
+      "hasBehaviorClips": true,
       "hasDescript": false
     },
     "velociraptor": {
@@ -24,8 +26,10 @@
       "nameCn": "迅猛龙",
       "manifestUrl": "/static-media/velociraptor/manifest.json",
       "hasNarration": true,
+      "hasDinoVoice": true,
       "hasDeck": true,
       "hasCanva": true,
+      "hasBehaviorClips": true,
       "hasDescript": false
     },
     "brachiosaurus": {
@@ -33,8 +37,10 @@
       "nameCn": "腕龙",
       "manifestUrl": "/static-media/brachiosaurus/manifest.json",
       "hasNarration": true,
+      "hasDinoVoice": true,
       "hasDeck": true,
       "hasCanva": true,
+      "hasBehaviorClips": true,
       "hasDescript": false
     },
     "triceratops": {
@@ -42,8 +48,10 @@
       "nameCn": "三角龙",
       "manifestUrl": "/static-media/triceratops/manifest.json",
       "hasNarration": true,
+      "hasDinoVoice": true,
       "hasDeck": true,
       "hasCanva": true,
+      "hasBehaviorClips": true,
       "hasDescript": false
     },
     "stegosaurus": {
@@ -51,8 +59,10 @@
       "nameCn": "剑龙",
       "manifestUrl": "/static-media/stegosaurus/manifest.json",
       "hasNarration": true,
+      "hasDinoVoice": true,
       "hasDeck": true,
       "hasCanva": true,
+      "hasBehaviorClips": true,
       "hasDescript": false
     },
     "spinosaurus": {
@@ -60,8 +70,10 @@
       "nameCn": "棘龙",
       "manifestUrl": "/static-media/spinosaurus/manifest.json",
       "hasNarration": true,
+      "hasDinoVoice": true,
       "hasDeck": true,
       "hasCanva": true,
+      "hasBehaviorClips": true,
       "hasDescript": false
     }
   }

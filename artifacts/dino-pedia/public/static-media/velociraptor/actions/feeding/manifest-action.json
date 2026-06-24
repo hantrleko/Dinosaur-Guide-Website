@@ -1,0 +1,34 @@
+{
+  "action": "feeding",
+  "title": "迅猛龙 进食",
+  "source": "canva",
+  "posterUrl": "/static-media/velociraptor/actions/feeding/poster.webp",
+  "frames": [
+    {
+      "index": 1,
+      "url": "/static-media/velociraptor/actions/feeding/frames/frame-01.webp"
+    },
+    {
+      "index": 2,
+      "url": "/static-media/velociraptor/actions/feeding/frames/frame-02.webp"
+    },
+    {
+      "index": 3,
+      "url": "/static-media/velociraptor/actions/feeding/frames/frame-03.webp"
+    },
+    {
+      "index": 4,
+      "url": "/static-media/velociraptor/actions/feeding/frames/frame-04.webp"
+    },
+    {
+      "index": 5,
+      "url": "/static-media/velociraptor/actions/feeding/frames/frame-05.webp"
+    },
+    {
+      "index": 6,
+      "url": "/static-media/velociraptor/actions/feeding/frames/frame-06.webp"
+    }
+  ],
+  "prompt": "迅猛龙 / Velociraptor\n时代：白垩纪\n食性：肉食\n体长：2米\n体重：0.015吨\n分布：亚洲\n简介：迅猛龙是一种小型而敏捷的驰龙类恐龙。它们大脑发达，视觉锐利，后肢的第二趾上长有一个像镰刀一样的大爪子，用于捕杀猎物。\n趣味知识：真实的迅猛龙体型只有火鸡大小，且全身覆盖着羽毛。",
+  "status": "success"
+}

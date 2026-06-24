@@ -9,6 +9,8 @@ interface DinoCardProps {
   index: number;
   isFavorited?: boolean;
   hasStaticMedia?: boolean;
+  hasBehaviorMedia?: boolean;
+  hasDinoVoice?: boolean;
   onGenerateVoice?: (dino: Dinosaur) => void;
   onGenerateDeck?: (dino: Dinosaur) => void;
   onToggleFavorite?: (dinoId: string) => void;
@@ -19,6 +21,8 @@ export function DinoCard({
   index,
   isFavorited,
   hasStaticMedia,
+  hasBehaviorMedia,
+  hasDinoVoice,
   onGenerateVoice,
   onGenerateDeck,
   onToggleFavorite,
@@ -56,6 +60,16 @@ export function DinoCard({
                 <span className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium rounded-full bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 backdrop-blur-md">
                   <BadgeCheck size={12} />
                   静态资源
+                </span>
+              ) : null}
+              {hasBehaviorMedia ? (
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium rounded-full bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 backdrop-blur-md">
+                  动态行为
+                </span>
+              ) : null}
+              {hasDinoVoice ? (
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium rounded-full bg-rose-500/20 text-rose-200 border border-rose-400/30 backdrop-blur-md">
+                  恐龙语音
                 </span>
               ) : null}
               <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-black/60 text-primary border border-primary/20 backdrop-blur-md">

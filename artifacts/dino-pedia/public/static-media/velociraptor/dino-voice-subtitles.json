@@ -1,0 +1,32 @@
+[
+  {
+    "startMs": 0,
+    "endMs": 900,
+    "text": "注意：我是一只迅猛龙"
+  },
+  {
+    "startMs": 900,
+    "endMs": 2220,
+    "text": "， Velociraptor。"
+  },
+  {
+    "startMs": 2220,
+    "endMs": 3276,
+    "text": "我栖息于白垩纪，来自亚洲"
+  },
+  {
+    "startMs": 3276,
+    "endMs": 4176,
+    "text": "，属于肉食类型。"
+  },
+  {
+    "startMs": 4176,
+    "endMs": 5408,
+    "text": "体长2米，体重0.015吨。"
+  },
+  {
+    "startMs": 5408,
+    "endMs": 6308,
+    "text": "咆哮吧！"
+  }
+]

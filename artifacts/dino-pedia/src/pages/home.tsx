@@ -273,16 +273,18 @@ export default function Home() {
         {filteredDinos.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredDinos.map((dino, index) => (
-              <DinoCard
-                key={dino.id}
-                dino={dino}
-                index={index}
-                isFavorited={favoriteIds.includes(dino.id)}
-                hasStaticMedia={Boolean(staticMediaIndex.data?.items?.[dino.id])}
-                onGenerateDeck={handleCreateDeck}
-                onGenerateVoice={handleCreateVoice}
-                onToggleFavorite={handleToggleFavorite}
-              />
+                <DinoCard
+                  key={dino.id}
+                  dino={dino}
+                  index={index}
+                  isFavorited={favoriteIds.includes(dino.id)}
+                  hasStaticMedia={Boolean(staticMediaIndex.data?.items?.[dino.id])}
+                  hasBehaviorMedia={Boolean(staticMediaIndex.data?.items?.[dino.id]?.hasBehaviorClips)}
+                  hasDinoVoice={Boolean(staticMediaIndex.data?.items?.[dino.id]?.hasDinoVoice)}
+                  onGenerateDeck={handleCreateDeck}
+                  onGenerateVoice={handleCreateVoice}
+                  onToggleFavorite={handleToggleFavorite}
+                />
             ))}
           </div>
         ) : (

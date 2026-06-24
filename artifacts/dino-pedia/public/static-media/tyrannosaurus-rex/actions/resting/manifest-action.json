@@ -1,0 +1,34 @@
+{
+  "action": "resting",
+  "title": "霸王龙 休息",
+  "source": "canva",
+  "posterUrl": "/static-media/tyrannosaurus-rex/actions/resting/poster.webp",
+  "frames": [
+    {
+      "index": 1,
+      "url": "/static-media/tyrannosaurus-rex/actions/resting/frames/frame-01.webp"
+    },
+    {
+      "index": 2,
+      "url": "/static-media/tyrannosaurus-rex/actions/resting/frames/frame-02.webp"
+    },
+    {
+      "index": 3,
+      "url": "/static-media/tyrannosaurus-rex/actions/resting/frames/frame-03.webp"
+    },
+    {
+      "index": 4,
+      "url": "/static-media/tyrannosaurus-rex/actions/resting/frames/frame-04.webp"
+    },
+    {
+      "index": 5,
+      "url": "/static-media/tyrannosaurus-rex/actions/resting/frames/frame-05.webp"
+    },
+    {
+      "index": 6,
+      "url": "/static-media/tyrannosaurus-rex/actions/resting/frames/frame-06.webp"
+    }
+  ],
+  "prompt": "霸王龙 / Tyrannosaurus rex\n时代：白垩纪\n食性：肉食\n体长：12.3米\n体重：8.4吨\n分布：北美洲\n简介：霸王龙是史上最庞大且最著名的肉食性恐龙之一。它们拥有极其强大的咬合力，能够轻易咬碎猎物的骨头。前肢虽然短小，但依然具备强大的力量。\n趣味知识：霸王龙的咬合力可达6吨，相当于一头大象的重量！",
+  "status": "success"
+}

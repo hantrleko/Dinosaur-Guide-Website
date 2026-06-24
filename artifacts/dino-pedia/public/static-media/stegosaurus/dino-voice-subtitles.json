@@ -1,0 +1,32 @@
+[
+  {
+    "startMs": 0,
+    "endMs": 900,
+    "text": "注意：我是一只剑龙"
+  },
+  {
+    "startMs": 900,
+    "endMs": 2132,
+    "text": "， Stegosaurus。"
+  },
+  {
+    "startMs": 2132,
+    "endMs": 3276,
+    "text": "我栖息于侏罗纪，来自北美洲"
+  },
+  {
+    "startMs": 3276,
+    "endMs": 4176,
+    "text": "，属于草食类型。"
+  },
+  {
+    "startMs": 4176,
+    "endMs": 5232,
+    "text": "体长9米，体重5.3吨。"
+  },
+  {
+    "startMs": 5232,
+    "endMs": 6132,
+    "text": "咆哮吧！"
+  }
+]

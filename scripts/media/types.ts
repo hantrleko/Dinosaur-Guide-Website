@@ -1,5 +1,39 @@
 export type StaticProviderStatus = "success" | "demo" | "failed" | "skipped";
 
+export type StaticAction = "feeding" | "running" | "resting";
+export type StaticVoiceProvider = "elevenlabs" | "demo";
+export type StaticVisualSource = "canva" | "gamma" | "demo";
+
+export interface StaticBehaviorFrame {
+  index: number;
+  url: string;
+}
+
+export interface StaticBehaviorClip {
+  action: StaticAction;
+  title: string;
+  status: StaticProviderStatus;
+  source: StaticVisualSource;
+  posterUrl: string;
+  frames: StaticBehaviorFrame[];
+  animationUrl?: string;
+  animationWebmUrl?: string;
+  prompt?: string;
+  canvaEditableUrl?: string;
+  error?: string;
+}
+
+export interface StaticAudioTrack {
+  status: StaticProviderStatus;
+  provider: StaticVoiceProvider;
+  audioUrl: string;
+  transcript: string;
+  subtitlesUrl: string;
+  subtitles: SubtitleCue[];
+  durationMs?: number;
+  error?: string;
+}
+
 export interface DinoInput {
   id: string;
   nameCn: string;
@@ -33,17 +67,9 @@ export interface StaticMediaManifest {
   nameCn: string;
   nameLatin: string;
   generatedAt: string;
-  source: "static-media-v1";
-  narration?: {
-    status: StaticProviderStatus;
-    provider: "elevenlabs" | "demo";
-    audioUrl?: string;
-    transcript: string;
-    subtitlesUrl: string;
-    subtitles: SubtitleCue[];
-    durationMs?: number;
-    error?: string;
-  };
+  source: "static-media-v2";
+  narration?: StaticAudioTrack;
+  dinoVoice?: StaticAudioTrack;
   gamma?: {
     status: StaticProviderStatus;
     provider: "gamma" | "demo";
@@ -64,6 +90,7 @@ export interface StaticMediaManifest {
     promptUrl?: string;
     importText: string;
     error?: string;
+    behaviorClips?: Array<StaticBehaviorClip>;
   };
   descript?: {
     status: StaticProviderStatus;
@@ -73,11 +100,14 @@ export interface StaticMediaManifest {
     transcriptUrl?: string;
     error?: string;
   };
+  visual?: {
+    behaviorClips?: Array<StaticBehaviorClip>;
+  };
 }
 
 export interface StaticMediaIndex {
   generatedAt: string;
-  source: "static-media-v1";
+  source: "static-media-v2";
   defaultDinoIds: string[];
   items: Record<
     string,
@@ -86,8 +116,10 @@ export interface StaticMediaIndex {
       nameCn: string;
       manifestUrl: string;
       hasNarration: boolean;
+      hasDinoVoice: boolean;
       hasDeck: boolean;
       hasCanva: boolean;
+      hasBehaviorClips: boolean;
       hasDescript: boolean;
     }
   >;

@@ -1,11 +1,34 @@
 {
-  "generationId": "yeBcQzNkZlQufm9iyXg5v",
-  "status": "completed",
-  "gammaId": "g_0yfjk2q105eguyy",
-  "gammaUrl": "https://gamma.app/docs/lkb56q04cr2rere",
-  "exportUrl": "https://assets.api.gamma.app/export/pdf/lkb56q04cr2rere/dd39d45af54b28a7be0037bcffdaedee/Brachiosaurus.pdf",
-  "credits": {
-    "deducted": 60,
-    "remaining": 7807
+  "status": "skipped",
+  "provider": "demo",
+  "reason": "GAMMA_API_KEY is not set",
+  "content": "腕龙（Brachiosaurus）\n时代：侏罗纪\n食性：草食\n体长：26米\n体重：40吨\n分布：北美洲\n简介：腕龙是巨大的蜥脚类恐龙，其最显著的特征是前肢比后肢长。它们长长的脖子使它们能够吃到高树上的针叶，就像现代的长颈鹿一样。\n趣味：腕龙一天可能需要吃掉超过400公斤的植物！",
+  "summary": {
+    "title": "腕龙 展示页",
+    "sections": [
+      {
+        "title": "核心参数",
+        "facts": [
+          "侏罗纪 · 草食",
+          "体长约 26 米，体重约 40 吨",
+          "主要分布：北美洲"
+        ]
+      },
+      {
+        "title": "视觉建议",
+        "facts": [
+          "体型对比图",
+          "时代时间线",
+          "栖息地背景"
+        ]
+      },
+      {
+        "title": "讲述重点",
+        "facts": [
+          "腕龙是巨大的蜥脚类恐龙，其最显著的特征是前肢比后肢长。它们长长的脖子使它们能够吃到高树上的针叶，就像现代的长颈鹿一样。",
+          "腕龙一天可能需要吃掉超过400公斤的植物！"
+        ]
+      }
+    ]
   }
 }

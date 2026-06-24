@@ -1,10 +1,17 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { buildDeckContent, buildNarrationScript, defaultDinoIds, loadDinosaurs, pickDinosaurs } from "./dinosaur-source.ts";
+import {
+  buildDeckContent,
+  buildDinoVoiceScript,
+  buildNarrationScript,
+  defaultDinoIds,
+  loadDinosaurs,
+  pickDinosaurs,
+} from "./dinosaur-source.ts";
 import { generateCanvaAsset } from "./canva-static.ts";
 import { generateDescriptProject } from "./descript-static.ts";
-import { generateNarration } from "./elevenlabs-static.ts";
+import { generateDinoVoice, generateNarration } from "./elevenlabs-static.ts";
 import { generateGammaDeck } from "./gamma-static.ts";
 import type { StaticMediaIndex, StaticMediaManifest } from "./types.ts";
 
@@ -42,9 +49,17 @@ export async function generateStaticMedia(args: string[]) {
 
     const script = buildNarrationScript(dino);
     const deckContent = buildDeckContent(dino);
+    const dinoVoiceScript = buildDinoVoiceScript(dino);
     const narration = await generateNarration({
       dino,
       script,
+      outputDir,
+      publicBase,
+      dryRun,
+    });
+    const dinoVoice = await generateDinoVoice({
+      dino,
+      script: dinoVoiceScript,
       outputDir,
       publicBase,
       dryRun,
@@ -67,6 +82,7 @@ export async function generateStaticMedia(args: string[]) {
       outputDir,
       publicBase,
       dryRun,
+      dinoVoiceAudioFile: dinoVoice.audioUrl ? dinoVoice.audioUrl.replace(`${publicBase}/`, "") : "dino-voice.mp3",
     });
 
     const manifest: StaticMediaManifest = {
@@ -74,11 +90,15 @@ export async function generateStaticMedia(args: string[]) {
       nameCn: dino.nameCn,
       nameLatin: dino.nameLatin,
       generatedAt,
-      source: "static-media-v1",
+      source: "static-media-v2",
       narration,
+      dinoVoice,
       gamma,
       canva,
       descript,
+      visual: {
+        behaviorClips: canva?.behaviorClips,
+      },
     };
     await writeManifest(manifest, outputDir);
     manifests.push(manifest);
@@ -86,7 +106,7 @@ export async function generateStaticMedia(args: string[]) {
 
   const index: StaticMediaIndex = {
     generatedAt,
-    source: "static-media-v1",
+    source: "static-media-v2",
     defaultDinoIds,
     items: Object.fromEntries(
       manifests.map((manifest) => [
@@ -99,6 +119,10 @@ export async function generateStaticMedia(args: string[]) {
             manifest.narration?.status === "success" ||
             manifest.narration?.status === "demo" ||
             manifest.narration?.status === "failed",
+          hasDinoVoice:
+            manifest.dinoVoice?.status === "success" ||
+            manifest.dinoVoice?.status === "demo" ||
+            manifest.dinoVoice?.status === "failed",
           hasDeck:
             manifest.gamma?.status === "success" ||
             manifest.gamma?.status === "demo" ||
@@ -108,6 +132,8 @@ export async function generateStaticMedia(args: string[]) {
             manifest.canva?.status === "success" ||
             manifest.canva?.status === "demo" ||
             Boolean(manifest.canva?.posterUrl),
+          hasBehaviorClips:
+            Boolean(manifest.visual?.behaviorClips && manifest.visual.behaviorClips.length > 0),
           hasDescript: manifest.descript?.status === "success",
         },
       ]),

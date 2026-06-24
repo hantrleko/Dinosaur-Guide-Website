@@ -1,0 +1,32 @@
+[
+  {
+    "startMs": 0,
+    "endMs": 900,
+    "text": "注意：我是一只棘龙"
+  },
+  {
+    "startMs": 900,
+    "endMs": 2132,
+    "text": "， Spinosaurus。"
+  },
+  {
+    "startMs": 2132,
+    "endMs": 3188,
+    "text": "我栖息于白垩纪，来自非洲"
+  },
+  {
+    "startMs": 3188,
+    "endMs": 4088,
+    "text": "，属于肉食类型。"
+  },
+  {
+    "startMs": 4088,
+    "endMs": 5056,
+    "text": "体长15米，体重7吨。"
+  },
+  {
+    "startMs": 5056,
+    "endMs": 5956,
+    "text": "咆哮吧！"
+  }
+]

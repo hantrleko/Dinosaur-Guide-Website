@@ -1,6 +1,6 @@
 {
   "status": "skipped",
   "provider": "descript",
-  "reason": "DESCRIPT_SOURCE_BASE_URL is not set; Descript imports require a public media URL",
+  "reason": "DESCRIPT_API_KEY is not set",
   "intendedAudioUrl": "/static-media/spinosaurus/narration.mp3"
 }

@@ -6,6 +6,39 @@ export interface StaticSubtitleCue {
   text: string;
 }
 
+export type StaticAction = "feeding" | "running" | "resting";
+export type StaticProviderStatus = "success" | "demo" | "failed" | "skipped";
+
+export interface StaticBehaviorFrame {
+  index: number;
+  url: string;
+}
+
+export interface StaticBehaviorClip {
+  action: StaticAction;
+  title: string;
+  status: StaticProviderStatus;
+  source: "canva" | "gamma" | "demo";
+  posterUrl: string;
+  frames: StaticBehaviorFrame[];
+  animationUrl?: string;
+  animationWebmUrl?: string;
+  prompt?: string;
+  canvaEditableUrl?: string;
+  error?: string;
+}
+
+export interface StaticAudioTrack {
+  status: StaticProviderStatus;
+  provider: "elevenlabs" | "demo";
+  audioUrl?: string;
+  transcript: string;
+  subtitlesUrl: string;
+  subtitles: StaticSubtitleCue[];
+  durationMs?: number;
+  error?: string;
+}
+
 export interface StaticDeckSummary {
   title: string;
   sections: Array<{
@@ -19,19 +52,11 @@ export interface StaticMediaManifest {
   nameCn: string;
   nameLatin: string;
   generatedAt: string;
-  source: "static-media-v1";
-  narration?: {
-    status: "success" | "demo" | "failed" | "skipped";
-    provider: "elevenlabs" | "demo";
-    audioUrl?: string;
-    transcript: string;
-    subtitlesUrl: string;
-    subtitles: StaticSubtitleCue[];
-    durationMs?: number;
-    error?: string;
-  };
+  source: "static-media-v2";
+  narration?: StaticAudioTrack;
+  dinoVoice?: StaticAudioTrack;
   gamma?: {
-    status: "success" | "demo" | "failed" | "skipped";
+    status: StaticProviderStatus;
     provider: "gamma" | "demo";
     title: string;
     deckUrl?: string;
@@ -42,28 +67,32 @@ export interface StaticMediaManifest {
     error?: string;
   };
   canva?: {
-    status: "success" | "demo" | "failed" | "skipped";
+    status: StaticProviderStatus;
     provider: "canva" | "demo";
     title: string;
     posterUrl?: string;
     editableUrl?: string;
     promptUrl?: string;
     importText: string;
+    behaviorClips?: StaticBehaviorClip[];
     error?: string;
   };
   descript?: {
-    status: "success" | "demo" | "failed" | "skipped";
+    status: StaticProviderStatus;
     provider: "descript";
     projectUrl?: string;
     publishUrl?: string;
     transcriptUrl?: string;
     error?: string;
   };
+  visual?: {
+    behaviorClips?: StaticBehaviorClip[];
+  };
 }
 
 export interface StaticMediaIndex {
   generatedAt: string;
-  source: "static-media-v1";
+  source: "static-media-v2";
   defaultDinoIds: string[];
   items: Record<
     string,
@@ -72,8 +101,10 @@ export interface StaticMediaIndex {
       nameCn: string;
       manifestUrl: string;
       hasNarration: boolean;
+      hasDinoVoice: boolean;
       hasDeck: boolean;
       hasCanva: boolean;
+      hasBehaviorClips: boolean;
       hasDescript: boolean;
     }
   >;

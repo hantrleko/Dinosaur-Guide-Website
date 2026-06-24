@@ -7,8 +7,9 @@ export async function generateDescriptProject(params: {
   outputDir: string;
   publicBase: string;
   dryRun: boolean;
+  dinoVoiceAudioFile?: string;
 }): Promise<StaticMediaManifest["descript"]> {
-  const { dino, outputDir, publicBase, dryRun } = params;
+  const { dino, outputDir, publicBase, dryRun, dinoVoiceAudioFile } = params;
   await mkdir(outputDir, { recursive: true });
   const token = process.env.DESCRIPT_API_KEY;
   const sourceBaseUrl = process.env.DESCRIPT_SOURCE_BASE_URL;
@@ -41,17 +42,32 @@ export async function generateDescriptProject(params: {
         "content-type": "application/json",
       },
       body: JSON.stringify({
-        project_name: `Dinosaur Guide - ${dino.nameCn}`,
+      project_name: `Dinosaur Guide - ${dino.nameCn}`,
         add_media: {
           "narration.mp3": {
             url: `${sourceBaseUrl}${publicBase}/narration.mp3`,
           },
+          ...(dinoVoiceAudioFile
+            ? {
+                "dino-voice.mp3": {
+                  url: `${sourceBaseUrl}${publicBase}/${dinoVoiceAudioFile}`,
+                },
+              }
+            : {}),
         },
         add_compositions: [
           {
             name: `${dino.nameCn} 讲解`,
             clips: [{ media: "narration.mp3" }],
           },
+          ...(dinoVoiceAudioFile
+            ? [
+                {
+                  name: `${dino.nameCn} 恐龙语音`,
+                  clips: [{ media: "dino-voice.mp3" }],
+                },
+              ]
+            : []),
         ],
       }),
     });

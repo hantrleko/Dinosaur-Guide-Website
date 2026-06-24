@@ -1,0 +1,32 @@
+[
+  {
+    "startMs": 0,
+    "endMs": 900,
+    "text": "注意：我是一只腕龙"
+  },
+  {
+    "startMs": 900,
+    "endMs": 2308,
+    "text": "， Brachiosaurus。"
+  },
+  {
+    "startMs": 2308,
+    "endMs": 3452,
+    "text": "我栖息于侏罗纪，来自北美洲"
+  },
+  {
+    "startMs": 3452,
+    "endMs": 4352,
+    "text": "，属于草食类型。"
+  },
+  {
+    "startMs": 4352,
+    "endMs": 5408,
+    "text": "体长26米，体重40吨。"
+  },
+  {
+    "startMs": 5408,
+    "endMs": 6308,
+    "text": "咆哮吧！"
+  }
+]
