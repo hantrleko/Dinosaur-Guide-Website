@@ -1,4 +1,4 @@
-import { copyFile, mkdir, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { spawn } from "node:child_process";
 import type { DinoInput, StaticBehaviorClip, StaticMediaManifest, StaticBehaviorFrame } from "./types.ts";
@@ -57,7 +57,7 @@ function canvaImportText(dino: DinoInput) {
 function buildFrames(prefix: string): StaticBehaviorFrame[] {
   return [1, 2, 3, 4, 5, 6].map((index) => ({
     index,
-    url: `${prefix}/frame-${String(index).padStart(2, "0")}.webp`,
+    url: `${prefix}/frame-${String(index).padStart(2, "0")}.png`,
   }));
 }
 
@@ -76,8 +76,9 @@ async function buildFramesFallback(
     "6",
     "-vf",
     "fps=1,scale=960x540",
-    path.join(frameDir, "frame-%02d.webp"),
+    path.join(frameDir, "frame-%02d.png"),
   ]);
+  await ensureFrameCount(frameDir);
   return buildFrames(prefix);
 }
 
@@ -137,8 +138,9 @@ async function generateActionClip(params: {
       "fps=1",
       "-frames:v",
       "6",
-      path.join(frameDir, "frame-%02d.webp"),
+      path.join(frameDir, "frame-%02d.png"),
     ]);
+    await ensureFrameCount(frameDir);
 
     await run("ffmpeg", [
       "-y",
@@ -245,4 +247,24 @@ export async function generateCanvaAsset(params: {
       ? undefined
       : "Canva plugin flow prepared; attach exported editable URL when available.",
   };
+}
+
+async function ensureFrameCount(frameDir: string) {
+  const files = await readdir(frameDir);
+  const existing = files
+    .filter((name) => name.startsWith("frame-") && name.endsWith(".png"))
+    .sort();
+
+  if (existing.length === 0) {
+    throw new Error("No behavior frames generated");
+  }
+
+  if (existing.length >= 6) {
+    return;
+  }
+
+  const sample = path.join(frameDir, existing[0]);
+  for (let index = existing.length + 1; index <= 6; index += 1) {
+    await copyFile(sample, path.join(frameDir, `frame-${String(index).padStart(2, "0")}.png`));
+  }
 }

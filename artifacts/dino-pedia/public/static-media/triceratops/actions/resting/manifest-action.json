@@ -6,27 +6,27 @@
   "frames": [
     {
       "index": 1,
-      "url": "/static-media/triceratops/actions/resting/frames/frame-01.webp"
+      "url": "/static-media/triceratops/actions/resting/frames/frame-01.png"
     },
     {
       "index": 2,
-      "url": "/static-media/triceratops/actions/resting/frames/frame-02.webp"
+      "url": "/static-media/triceratops/actions/resting/frames/frame-02.png"
     },
     {
       "index": 3,
-      "url": "/static-media/triceratops/actions/resting/frames/frame-03.webp"
+      "url": "/static-media/triceratops/actions/resting/frames/frame-03.png"
     },
     {
       "index": 4,
-      "url": "/static-media/triceratops/actions/resting/frames/frame-04.webp"
+      "url": "/static-media/triceratops/actions/resting/frames/frame-04.png"
     },
     {
       "index": 5,
-      "url": "/static-media/triceratops/actions/resting/frames/frame-05.webp"
+      "url": "/static-media/triceratops/actions/resting/frames/frame-05.png"
     },
     {
       "index": 6,
-      "url": "/static-media/triceratops/actions/resting/frames/frame-06.webp"
+      "url": "/static-media/triceratops/actions/resting/frames/frame-06.png"
     }
   ],
   "prompt": "三角龙 / Triceratops\n时代：白垩纪\n食性：草食\n体长：9米\n体重：12吨\n分布：北美洲\n简介：三角龙是最大的角龙类恐龙，头部有三根长角和一个坚固的颈盾。这些特征主要用于防御顶级掠食者的攻击，也可能用于求偶展示。\n趣味知识：三角龙的头骨是已知陆地动物中最大的，几乎占据了体长的三分之一。",

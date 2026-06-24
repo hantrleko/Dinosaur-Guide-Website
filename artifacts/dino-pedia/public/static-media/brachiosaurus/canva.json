@@ -12,27 +12,27 @@
       "frames": [
         {
           "index": 1,
-          "url": "/static-media/brachiosaurus/actions/feeding/frames/frame-01.webp"
+          "url": "/static-media/brachiosaurus/actions/feeding/frames/frame-01.png"
         },
         {
           "index": 2,
-          "url": "/static-media/brachiosaurus/actions/feeding/frames/frame-02.webp"
+          "url": "/static-media/brachiosaurus/actions/feeding/frames/frame-02.png"
         },
         {
           "index": 3,
-          "url": "/static-media/brachiosaurus/actions/feeding/frames/frame-03.webp"
+          "url": "/static-media/brachiosaurus/actions/feeding/frames/frame-03.png"
         },
         {
           "index": 4,
-          "url": "/static-media/brachiosaurus/actions/feeding/frames/frame-04.webp"
+          "url": "/static-media/brachiosaurus/actions/feeding/frames/frame-04.png"
         },
         {
           "index": 5,
-          "url": "/static-media/brachiosaurus/actions/feeding/frames/frame-05.webp"
+          "url": "/static-media/brachiosaurus/actions/feeding/frames/frame-05.png"
         },
         {
           "index": 6,
-          "url": "/static-media/brachiosaurus/actions/feeding/frames/frame-06.webp"
+          "url": "/static-media/brachiosaurus/actions/feeding/frames/frame-06.png"
         }
       ],
       "prompt": "腕龙 / Brachiosaurus\n时代：侏罗纪\n食性：草食\n体长：26米\n体重：40吨\n分布：北美洲\n简介：腕龙是巨大的蜥脚类恐龙，其最显著的特征是前肢比后肢长。它们长长的脖子使它们能够吃到高树上的针叶，就像现代的长颈鹿一样。\n趣味知识：腕龙一天可能需要吃掉超过400公斤的植物！",
@@ -47,27 +47,27 @@
       "frames": [
         {
           "index": 1,
-          "url": "/static-media/brachiosaurus/actions/running/frames/frame-01.webp"
+          "url": "/static-media/brachiosaurus/actions/running/frames/frame-01.png"
         },
         {
           "index": 2,
-          "url": "/static-media/brachiosaurus/actions/running/frames/frame-02.webp"
+          "url": "/static-media/brachiosaurus/actions/running/frames/frame-02.png"
         },
         {
           "index": 3,
-          "url": "/static-media/brachiosaurus/actions/running/frames/frame-03.webp"
+          "url": "/static-media/brachiosaurus/actions/running/frames/frame-03.png"
         },
         {
           "index": 4,
-          "url": "/static-media/brachiosaurus/actions/running/frames/frame-04.webp"
+          "url": "/static-media/brachiosaurus/actions/running/frames/frame-04.png"
         },
         {
           "index": 5,
-          "url": "/static-media/brachiosaurus/actions/running/frames/frame-05.webp"
+          "url": "/static-media/brachiosaurus/actions/running/frames/frame-05.png"
         },
         {
           "index": 6,
-          "url": "/static-media/brachiosaurus/actions/running/frames/frame-06.webp"
+          "url": "/static-media/brachiosaurus/actions/running/frames/frame-06.png"
         }
       ],
       "prompt": "腕龙 / Brachiosaurus\n时代：侏罗纪\n食性：草食\n体长：26米\n体重：40吨\n分布：北美洲\n简介：腕龙是巨大的蜥脚类恐龙，其最显著的特征是前肢比后肢长。它们长长的脖子使它们能够吃到高树上的针叶，就像现代的长颈鹿一样。\n趣味知识：腕龙一天可能需要吃掉超过400公斤的植物！",
@@ -82,27 +82,27 @@
       "frames": [
         {
           "index": 1,
-          "url": "/static-media/brachiosaurus/actions/resting/frames/frame-01.webp"
+          "url": "/static-media/brachiosaurus/actions/resting/frames/frame-01.png"
         },
         {
           "index": 2,
-          "url": "/static-media/brachiosaurus/actions/resting/frames/frame-02.webp"
+          "url": "/static-media/brachiosaurus/actions/resting/frames/frame-02.png"
         },
         {
           "index": 3,
-          "url": "/static-media/brachiosaurus/actions/resting/frames/frame-03.webp"
+          "url": "/static-media/brachiosaurus/actions/resting/frames/frame-03.png"
         },
         {
           "index": 4,
-          "url": "/static-media/brachiosaurus/actions/resting/frames/frame-04.webp"
+          "url": "/static-media/brachiosaurus/actions/resting/frames/frame-04.png"
         },
         {
           "index": 5,
-          "url": "/static-media/brachiosaurus/actions/resting/frames/frame-05.webp"
+          "url": "/static-media/brachiosaurus/actions/resting/frames/frame-05.png"
         },
         {
           "index": 6,
-          "url": "/static-media/brachiosaurus/actions/resting/frames/frame-06.webp"
+          "url": "/static-media/brachiosaurus/actions/resting/frames/frame-06.png"
         }
       ],
       "prompt": "腕龙 / Brachiosaurus\n时代：侏罗纪\n食性：草食\n体长：26米\n体重：40吨\n分布：北美洲\n简介：腕龙是巨大的蜥脚类恐龙，其最显著的特征是前肢比后肢长。它们长长的脖子使它们能够吃到高树上的针叶，就像现代的长颈鹿一样。\n趣味知识：腕龙一天可能需要吃掉超过400公斤的植物！",
@@ -113,3 +113,4 @@
   "connectorAttempted": true,
   "connectorError": "Canva connector attempted: Magic Design is not enabled in this team, and poster import returned invalid_file. Local poster and behavior clips are included; attach editable Canva URL when the account feature is enabled."
 }
+
