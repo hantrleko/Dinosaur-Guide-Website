@@ -32,6 +32,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { dinosaurs } from "@/data/dinosaurs";
 import type { Dinosaur } from "@/data/dinosaurs";
+import { useStaticMediaManifest } from "@/lib/static-media";
 import NotFound from "./not-found";
 
 const FAVORITE_STORAGE_KEY = "dino-pedia-favorites";
@@ -104,6 +105,7 @@ export default function Detail() {
   });
   const allDinosQuery = useGetDinos({ query: { staleTime: 60_000 } });
   const voicesQuery = useGetVoices({ query: { staleTime: 120_000 } });
+  const staticMediaQuery = useStaticMediaManifest(dinoId);
 
   const dino: Dinosaur | undefined = dinoQuery.data ?? dinosaurs.find((item) => item.id === dinoId);
   const allDinos = allDinosQuery.data?.items?.length
@@ -227,6 +229,28 @@ export default function Detail() {
   const voiceStatus = (voiceJobQuery.data as any)?.status;
   const deckStatus = (deckJobQuery.data as any)?.status;
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const staticMedia = staticMediaQuery.data;
+  const staticVoiceAsset = staticMedia?.narration?.audioUrl
+    ? {
+        audioUrl: staticMedia.narration.audioUrl,
+        transcript: staticMedia.narration.transcript,
+        subtitles: staticMedia.narration.subtitles,
+        durationMs: staticMedia.narration.durationMs,
+        provider: staticMedia.narration.provider,
+      }
+    : null;
+  const staticDeckAsset = staticMedia?.gamma || staticMedia?.canva
+    ? {
+        title: staticMedia.gamma?.title ?? staticMedia.canva?.title ?? `${staticMedia.nameCn} 展示页`,
+        previewUrl: staticMedia.gamma?.deckUrl ?? staticMedia.canva?.posterUrl ?? "",
+        shareUrl: staticMedia.gamma?.gammaUrl,
+        canvaEditableUrl: staticMedia.canva?.editableUrl,
+        importText: staticMedia.canva?.importText,
+        summary: staticMedia.gamma?.summary,
+      }
+    : null;
+  const effectiveVoiceAsset = voiceAsset ?? staticVoiceAsset;
+  const effectiveDeckAsset = deckAsset ?? staticDeckAsset;
 
   const voiceJobs = mediaJobsQuery.data?.items?.filter((job) => job.type === "voice") ?? [];
   const deckJobs = mediaJobsQuery.data?.items?.filter((job) => job.type === "deck") ?? [];
@@ -294,7 +318,7 @@ export default function Detail() {
   const handleTimeUpdate: UIEventHandler<HTMLAudioElement> = (event) => {
     const audio = event.currentTarget;
     const nowMs = audio.currentTime * 1000;
-    const cues = (voiceAsset?.subtitles ?? []) as Array<{
+    const cues = (effectiveVoiceAsset?.subtitles ?? []) as Array<{
       startMs: number;
       endMs: number;
     }>;
@@ -371,14 +395,14 @@ export default function Detail() {
   }, [syncQueryParam]);
 
   const copyDeckText = useCallback(async () => {
-    if (!deckAsset?.importText) return;
+    if (!effectiveDeckAsset?.importText) return;
     try {
-      await navigator.clipboard.writeText(deckAsset.importText);
+      await navigator.clipboard.writeText(effectiveDeckAsset.importText);
       toast({ title: "已复制到剪贴板", description: "可直接导入到 Canva 的文本素材。"});
     } catch {
       toast({ title: "复制失败", description: "请手动选中复制。", });
     }
-  }, [deckAsset?.importText, toast]);
+  }, [effectiveDeckAsset?.importText, toast]);
 
   if (!dino) return <NotFound />;
   const DietIcon = dino.diet === "肉食" ? Drumstick : dino.diet === "草食" ? Leaf : Utensils;
@@ -390,7 +414,7 @@ export default function Detail() {
     (!deckAsset || (deckStatus === "queued" || deckStatus === "running"));
   const hasOfflineData = dinoQuery.isError && dino && !dinoQuery.data;
 
-  const subtitleItems = (voiceAsset?.subtitles ?? []) as Array<{
+  const subtitleItems = (effectiveVoiceAsset?.subtitles ?? []) as Array<{
     text: string;
     startMs: number;
     endMs: number;
@@ -491,6 +515,11 @@ export default function Detail() {
             <h3 className="text-2xl font-serif font-bold text-primary mb-6">
               多模态介绍区
             </h3>
+            {staticMedia ? (
+              <div className="mb-6 rounded-xl border border-emerald-400/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-100">
+                已加载静态多媒体资源：讲解、Gamma 展示与 Canva 视觉资产会优先从站内文件读取。
+              </div>
+            ) : null}
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
               <div className="rounded-2xl border border-border p-5 bg-card space-y-4">
                 <div className="flex items-center justify-between">
@@ -502,7 +531,7 @@ export default function Detail() {
                   >
                     <span className="inline-flex items-center gap-1">
                       <FileAudio size={14} />
-                      {voiceJobId ? "重新生成" : "生成讲解音频"}
+                      {effectiveVoiceAsset ? "补生成音频" : voiceJobId ? "重新生成" : "生成讲解音频"}
                     </span>
                   </button>
                 </div>
@@ -535,12 +564,12 @@ export default function Detail() {
                   ) : null}
                 </div>
 
-                {voiceAsset?.audioUrl ? (
+                {effectiveVoiceAsset?.audioUrl ? (
                   <div className="space-y-3">
                     <audio
                       ref={audioRef}
                       controls
-                      src={voiceAsset.audioUrl}
+                      src={effectiveVoiceAsset.audioUrl}
                       onTimeUpdate={handleTimeUpdate}
                       className="w-full"
                     />
@@ -594,7 +623,7 @@ export default function Detail() {
                   >
                     <span className="inline-flex items-center gap-1">
                       <LayoutTemplate size={14} />
-                      {deckJobId ? "重新生成" : "生成展示页"}
+                      {effectiveDeckAsset ? "补生成展示" : deckJobId ? "重新生成" : "生成展示页"}
                     </span>
                   </button>
                 </div>
@@ -626,22 +655,29 @@ export default function Detail() {
                   </div>
                 ) : null}
 
-                {deckAsset ? (
+                {effectiveDeckAsset ? (
                   <div className="space-y-3 text-sm">
                     <div className="rounded-lg bg-black/30 border border-border p-3">
                       <p className="text-muted-foreground mb-2">标题</p>
-                      <p className="font-medium">{deckAsset.title}</p>
+                      <p className="font-medium">{effectiveDeckAsset.title}</p>
                     </div>
-                    {deckAsset.previewUrl ? (
+                    {staticMedia?.canva?.posterUrl ? (
+                      <img
+                        src={staticMedia.canva.posterUrl}
+                        alt={`${dino.nameCn} Canva 视觉卡片`}
+                        className="w-full rounded-lg border border-border object-cover"
+                      />
+                    ) : null}
+                    {effectiveDeckAsset.previewUrl ? (
                       <iframe
-                        src={deckAsset.previewUrl}
+                        src={effectiveDeckAsset.previewUrl}
                         className="w-full h-52 border border-border rounded-lg"
                         title={`${dino.nameCn} 预览`}
                       />
                     ) : null}
                     <div className="flex flex-wrap gap-2">
                       <a
-                        href={deckAsset.previewUrl}
+                        href={effectiveDeckAsset.previewUrl}
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-secondary border border-border"
@@ -649,9 +685,9 @@ export default function Detail() {
                         <WandSparkles size={14} />
                         打开链接
                       </a>
-                      {deckAsset.canvaEditableUrl ? (
+                      {effectiveDeckAsset.canvaEditableUrl ? (
                         <a
-                          href={deckAsset.canvaEditableUrl}
+                          href={effectiveDeckAsset.canvaEditableUrl}
                           target="_blank"
                           rel="noreferrer"
                           className="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-secondary border border-border"
@@ -659,7 +695,7 @@ export default function Detail() {
                           打开 Canva 可编辑
                         </a>
                       ) : null}
-                      {deckAsset.importText ? (
+                      {effectiveDeckAsset.importText ? (
                         <button
                           onClick={copyDeckText}
                           className="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-secondary border border-border"
@@ -669,9 +705,29 @@ export default function Detail() {
                         </button>
                       ) : null}
                     </div>
-                    {deckAsset.summary ? (
+                    {staticMedia?.gamma?.pdfUrl ? (
+                      <a
+                        href={staticMedia.gamma.pdfUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-secondary border border-border"
+                      >
+                        下载 PDF
+                      </a>
+                    ) : null}
+                    {staticMedia?.descript?.projectUrl ? (
+                      <a
+                        href={staticMedia.descript.projectUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-secondary border border-border"
+                      >
+                        打开 Descript 项目
+                      </a>
+                    ) : null}
+                    {effectiveDeckAsset.summary ? (
                       <div className="pt-2 space-y-3">
-                        {deckAsset.summary.sections.map((section) => (
+                        {effectiveDeckAsset.summary.sections.map((section) => (
                           <div key={section.title} className="rounded-lg border border-border p-3">
                             <p className="font-medium mb-2">{section.title}</p>
                             <ul className="list-disc pl-5 space-y-1 text-muted-foreground">

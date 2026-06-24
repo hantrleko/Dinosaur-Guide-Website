@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-06-24T03:47:23.246Z",
+  "source": "static-media-v1",
+  "defaultDinoIds": [
+    "tyrannosaurus-rex",
+    "velociraptor",
+    "triceratops",
+    "brachiosaurus",
+    "stegosaurus",
+    "spinosaurus"
+  ],
+  "items": {
+    "tyrannosaurus-rex": {
+      "dinoId": "tyrannosaurus-rex",
+      "nameCn": "霸王龙",
+      "manifestUrl": "/static-media/tyrannosaurus-rex/manifest.json",
+      "hasNarration": true,
+      "hasDeck": true,
+      "hasCanva": true,
+      "hasDescript": false
+    },
+    "velociraptor": {
+      "dinoId": "velociraptor",
+      "nameCn": "迅猛龙",
+      "manifestUrl": "/static-media/velociraptor/manifest.json",
+      "hasNarration": true,
+      "hasDeck": true,
+      "hasCanva": true,
+      "hasDescript": false
+    },
+    "brachiosaurus": {
+      "dinoId": "brachiosaurus",
+      "nameCn": "腕龙",
+      "manifestUrl": "/static-media/brachiosaurus/manifest.json",
+      "hasNarration": true,
+      "hasDeck": true,
+      "hasCanva": true,
+      "hasDescript": false
+    },
+    "triceratops": {
+      "dinoId": "triceratops",
+      "nameCn": "三角龙",
+      "manifestUrl": "/static-media/triceratops/manifest.json",
+      "hasNarration": true,
+      "hasDeck": true,
+      "hasCanva": true,
+      "hasDescript": false
+    },
+    "stegosaurus": {
+      "dinoId": "stegosaurus",
+      "nameCn": "剑龙",
+      "manifestUrl": "/static-media/stegosaurus/manifest.json",
+      "hasNarration": true,
+      "hasDeck": true,
+      "hasCanva": true,
+      "hasDescript": false
+    },
+    "spinosaurus": {
+      "dinoId": "spinosaurus",
+      "nameCn": "棘龙",
+      "manifestUrl": "/static-media/spinosaurus/manifest.json",
+      "hasNarration": true,
+      "hasDeck": true,
+      "hasCanva": true,
+      "hasDescript": false
+    }
+  }
+}

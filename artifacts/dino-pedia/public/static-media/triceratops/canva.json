@@ -1,0 +1,6 @@
+{
+  "status": "demo",
+  "mode": "plugin",
+  "generatedVia": "Canva plugin recommendation flow prepared in Codex; poster falls back to local dinosaur image until export URL is attached.",
+  "prompt": "Canva connector prompt:\nCreate an editable museum-style dinosaur poster for 三角龙 (Triceratops).\nUse bold Chinese title typography, fossil texture, timeline markers, and clear stat chips.\n三角龙 / Triceratops\n时代：白垩纪\n食性：草食\n体长：9米\n体重：12吨\n分布：北美洲\n简介：三角龙是最大的角龙类恐龙，头部有三根长角和一个坚固的颈盾。这些特征主要用于防御顶级掠食者的攻击，也可能用于求偶展示。\n趣味知识：三角龙的头骨是已知陆地动物中最大的，几乎占据了体长的三分之一。"
+}

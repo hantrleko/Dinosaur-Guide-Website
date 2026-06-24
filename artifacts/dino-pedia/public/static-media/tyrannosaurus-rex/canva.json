@@ -1,0 +1,6 @@
+{
+  "status": "demo",
+  "mode": "plugin",
+  "generatedVia": "Canva plugin recommendation flow prepared in Codex; poster falls back to local dinosaur image until export URL is attached.",
+  "prompt": "Canva connector prompt:\nCreate an editable museum-style dinosaur poster for 霸王龙 (Tyrannosaurus rex).\nUse bold Chinese title typography, fossil texture, timeline markers, and clear stat chips.\n霸王龙 / Tyrannosaurus rex\n时代：白垩纪\n食性：肉食\n体长：12.3米\n体重：8.4吨\n分布：北美洲\n简介：霸王龙是史上最庞大且最著名的肉食性恐龙之一。它们拥有极其强大的咬合力，能够轻易咬碎猎物的骨头。前肢虽然短小，但依然具备强大的力量。\n趣味知识：霸王龙的咬合力可达6吨，相当于一头大象的重量！"
+}

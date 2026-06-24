@@ -1,0 +1,94 @@
+{
+  "dinoId": "velociraptor",
+  "nameCn": "迅猛龙",
+  "nameLatin": "Velociraptor",
+  "generatedAt": "2026-06-24T03:47:23.246Z",
+  "source": "static-media-v1",
+  "narration": {
+    "status": "success",
+    "provider": "elevenlabs",
+    "audioUrl": "/static-media/velociraptor/narration.mp3",
+    "transcript": "迅猛龙（Velociraptor）是白垩纪的代表性古生物。 它属于肉食类型，体长约2米，体重约0.015吨，主要分布在亚洲。 迅猛龙是一种小型而敏捷的驰龙类恐龙。它们大脑发达，视觉锐利，后肢的第二趾上长有一个像镰刀一样的大爪子，用于捕杀猎物。 趣味知识：真实的迅猛龙体型只有火鸡大小，且全身覆盖着羽毛。",
+    "subtitlesUrl": "/static-media/velociraptor/subtitles.json",
+    "subtitles": [
+      {
+        "startMs": 0,
+        "endMs": 2755,
+        "text": "迅猛龙（Velociraptor）是白垩纪的代表性古生物。"
+      },
+      {
+        "startMs": 2755,
+        "endMs": 5795,
+        "text": "它属于肉食类型，体长约2米，体重约0.015吨，主要分布在亚洲。"
+      },
+      {
+        "startMs": 5795,
+        "endMs": 7505,
+        "text": "迅猛龙是一种小型而敏捷的驰龙类恐龙。"
+      },
+      {
+        "startMs": 7505,
+        "endMs": 11305,
+        "text": "它们大脑发达，视觉锐利，后肢的第二趾上长有一个像镰刀一样的大爪子，用于捕杀猎物。"
+      },
+      {
+        "startMs": 11305,
+        "endMs": 14060,
+        "text": "趣味知识：真实的迅猛龙体型只有火鸡大小，且全身覆盖着羽毛。"
+      }
+    ],
+    "durationMs": 14060
+  },
+  "gamma": {
+    "status": "success",
+    "provider": "gamma",
+    "title": "迅猛龙 展示页",
+    "deckUrl": "/static-media/velociraptor/deck.html",
+    "pdfUrl": "/static-media/velociraptor/deck.pdf",
+    "gammaUrl": "https://gamma.app/docs/6j4n80izjfv7t6g",
+    "exportUrl": "https://assets.api.gamma.app/export/pdf/6j4n80izjfv7t6g/58d2e7f06bc99bc69689f047356f4af3/Velociraptor.pdf",
+    "summary": {
+      "title": "迅猛龙 展示页",
+      "sections": [
+        {
+          "title": "核心参数",
+          "facts": [
+            "白垩纪 · 肉食",
+            "体长约 2 米，体重约 0.015 吨",
+            "主要分布：亚洲"
+          ]
+        },
+        {
+          "title": "视觉建议",
+          "facts": [
+            "体型对比图",
+            "时代时间线",
+            "栖息地背景"
+          ]
+        },
+        {
+          "title": "讲述重点",
+          "facts": [
+            "迅猛龙是一种小型而敏捷的驰龙类恐龙。它们大脑发达，视觉锐利，后肢的第二趾上长有一个像镰刀一样的大爪子，用于捕杀猎物。",
+            "真实的迅猛龙体型只有火鸡大小，且全身覆盖着羽毛。"
+          ]
+        }
+      ]
+    }
+  },
+  "canva": {
+    "status": "demo",
+    "provider": "canva",
+    "title": "迅猛龙 Canva 视觉卡片",
+    "posterUrl": "/static-media/velociraptor/poster.png",
+    "promptUrl": "/static-media/velociraptor/canva.json",
+    "importText": "迅猛龙 / Velociraptor\n时代：白垩纪\n食性：肉食\n体长：2米\n体重：0.015吨\n分布：亚洲\n简介：迅猛龙是一种小型而敏捷的驰龙类恐龙。它们大脑发达，视觉锐利，后肢的第二趾上长有一个像镰刀一样的大爪子，用于捕杀猎物。\n趣味知识：真实的迅猛龙体型只有火鸡大小，且全身覆盖着羽毛。",
+    "error": "Canva plugin flow prepared; attach exported editable URL when available."
+  },
+  "descript": {
+    "status": "skipped",
+    "provider": "descript",
+    "transcriptUrl": "/static-media/velociraptor/subtitles.json",
+    "error": "DESCRIPT_SOURCE_BASE_URL is not set; Descript imports require a public media URL"
+  }
+}

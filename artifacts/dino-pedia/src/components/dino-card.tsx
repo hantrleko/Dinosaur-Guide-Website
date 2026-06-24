@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { Drumstick, FileAudio, LayoutTemplate, Star, Utensils, Leaf } from "lucide-react";
+import { BadgeCheck, Drumstick, FileAudio, LayoutTemplate, Star, Utensils, Leaf } from "lucide-react";
 import type { MouseEvent } from "react";
 import type { Dinosaur } from "@/data/dinosaurs";
 
@@ -8,6 +8,7 @@ interface DinoCardProps {
   dino: Dinosaur;
   index: number;
   isFavorited?: boolean;
+  hasStaticMedia?: boolean;
   onGenerateVoice?: (dino: Dinosaur) => void;
   onGenerateDeck?: (dino: Dinosaur) => void;
   onToggleFavorite?: (dinoId: string) => void;
@@ -17,6 +18,7 @@ export function DinoCard({
   dino,
   index,
   isFavorited,
+  hasStaticMedia,
   onGenerateVoice,
   onGenerateDeck,
   onToggleFavorite,
@@ -50,6 +52,12 @@ export function DinoCard({
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
 
             <div className="absolute top-3 right-3 flex gap-2">
+              {hasStaticMedia ? (
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium rounded-full bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 backdrop-blur-md">
+                  <BadgeCheck size={12} />
+                  静态资源
+                </span>
+              ) : null}
               <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-black/60 text-primary border border-primary/20 backdrop-blur-md">
                 {dino.era}
               </span>
@@ -89,7 +97,7 @@ export function DinoCard({
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/15 text-primary border border-primary/30 hover:bg-primary/25 text-xs font-medium transition-colors"
               >
                 <FileAudio size={14} />
-                讲解音频
+                {hasStaticMedia ? "已有讲解" : "讲解音频"}
               </button>
               <button
                 data-testid={`card-action-deck-${dino.id}`}
@@ -100,7 +108,7 @@ export function DinoCard({
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/15 text-accent border border-accent/30 hover:bg-accent/25 text-xs font-medium transition-colors"
               >
                 <LayoutTemplate size={14} />
-                生成展示页
+                {hasStaticMedia ? "已有展示" : "生成展示页"}
               </button>
               <button
                 data-testid={`card-action-fav-${dino.id}`}

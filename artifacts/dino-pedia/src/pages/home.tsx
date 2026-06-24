@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
 import { dinosaurs, Era, type Dinosaur } from "@/data/dinosaurs";
 import { DinoCard } from "@/components/dino-card";
+import { useStaticMediaIndex } from "@/lib/static-media";
 
 const FAVORITE_STORAGE_KEY = "dino-pedia-favorites";
 
@@ -46,6 +47,7 @@ export default function Home() {
       retry: 1,
     },
   });
+  const staticMediaIndex = useStaticMediaIndex();
 
   const createVoiceMutation = useCreateVoiceJob({
     mutation: {
@@ -263,6 +265,9 @@ export default function Home() {
             : dinosQuery.data?.items?.length
               ? " 后端 /api/dinos"
               : " 本地静态降级"}
+          {staticMediaIndex.data
+            ? ` · 已预生成 ${Object.keys(staticMediaIndex.data.items).length} 个多媒体资源`
+            : ""}
         </p>
 
         {filteredDinos.length > 0 ? (
@@ -273,6 +278,7 @@ export default function Home() {
                 dino={dino}
                 index={index}
                 isFavorited={favoriteIds.includes(dino.id)}
+                hasStaticMedia={Boolean(staticMediaIndex.data?.items?.[dino.id])}
                 onGenerateDeck={handleCreateDeck}
                 onGenerateVoice={handleCreateVoice}
                 onToggleFavorite={handleToggleFavorite}

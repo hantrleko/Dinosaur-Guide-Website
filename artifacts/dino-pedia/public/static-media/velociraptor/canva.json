@@ -1,0 +1,6 @@
+{
+  "status": "demo",
+  "mode": "plugin",
+  "generatedVia": "Canva plugin recommendation flow prepared in Codex; poster falls back to local dinosaur image until export URL is attached.",
+  "prompt": "Canva connector prompt:\nCreate an editable museum-style dinosaur poster for 迅猛龙 (Velociraptor).\nUse bold Chinese title typography, fossil texture, timeline markers, and clear stat chips.\n迅猛龙 / Velociraptor\n时代：白垩纪\n食性：肉食\n体长：2米\n体重：0.015吨\n分布：亚洲\n简介：迅猛龙是一种小型而敏捷的驰龙类恐龙。它们大脑发达，视觉锐利，后肢的第二趾上长有一个像镰刀一样的大爪子，用于捕杀猎物。\n趣味知识：真实的迅猛龙体型只有火鸡大小，且全身覆盖着羽毛。"
+}

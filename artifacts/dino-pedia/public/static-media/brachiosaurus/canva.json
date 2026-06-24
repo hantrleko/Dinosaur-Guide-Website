@@ -1,0 +1,6 @@
+{
+  "status": "demo",
+  "mode": "plugin",
+  "generatedVia": "Canva plugin recommendation flow prepared in Codex; poster falls back to local dinosaur image until export URL is attached.",
+  "prompt": "Canva connector prompt:\nCreate an editable museum-style dinosaur poster for 腕龙 (Brachiosaurus).\nUse bold Chinese title typography, fossil texture, timeline markers, and clear stat chips.\n腕龙 / Brachiosaurus\n时代：侏罗纪\n食性：草食\n体长：26米\n体重：40吨\n分布：北美洲\n简介：腕龙是巨大的蜥脚类恐龙，其最显著的特征是前肢比后肢长。它们长长的脖子使它们能够吃到高树上的针叶，就像现代的长颈鹿一样。\n趣味知识：腕龙一天可能需要吃掉超过400公斤的植物！"
+}

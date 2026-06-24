@@ -1,0 +1,99 @@
+{
+  "dinoId": "tyrannosaurus-rex",
+  "nameCn": "霸王龙",
+  "nameLatin": "Tyrannosaurus rex",
+  "generatedAt": "2026-06-24T03:47:23.246Z",
+  "source": "static-media-v1",
+  "narration": {
+    "status": "success",
+    "provider": "elevenlabs",
+    "audioUrl": "/static-media/tyrannosaurus-rex/narration.mp3",
+    "transcript": "霸王龙（Tyrannosaurus rex）是白垩纪的代表性古生物。 它属于肉食类型，体长约12.3米，体重约8.4吨，主要分布在北美洲。 霸王龙是史上最庞大且最著名的肉食性恐龙之一。它们拥有极其强大的咬合力，能够轻易咬碎猎物的骨头。前肢虽然短小，但依然具备强大的力量。 趣味知识：霸王龙的咬合力可达6吨，相当于一头大象的重量！",
+    "subtitlesUrl": "/static-media/tyrannosaurus-rex/subtitles.json",
+    "subtitles": [
+      {
+        "startMs": 0,
+        "endMs": 3230,
+        "text": "霸王龙（Tyrannosaurus rex）是白垩纪的代表性古生物。"
+      },
+      {
+        "startMs": 3230,
+        "endMs": 6460,
+        "text": "它属于肉食类型，体长约12.3米，体重约8.4吨，主要分布在北美洲。"
+      },
+      {
+        "startMs": 6460,
+        "endMs": 8550,
+        "text": "霸王龙是史上最庞大且最著名的肉食性恐龙之一。"
+      },
+      {
+        "startMs": 8550,
+        "endMs": 10925,
+        "text": "它们拥有极其强大的咬合力，能够轻易咬碎猎物的骨头。"
+      },
+      {
+        "startMs": 10925,
+        "endMs": 12635,
+        "text": "前肢虽然短小，但依然具备强大的力量。"
+      },
+      {
+        "startMs": 12635,
+        "endMs": 15295,
+        "text": "趣味知识：霸王龙的咬合力可达6吨，相当于一头大象的重量！"
+      }
+    ],
+    "durationMs": 15295
+  },
+  "gamma": {
+    "status": "success",
+    "provider": "gamma",
+    "title": "霸王龙 展示页",
+    "deckUrl": "/static-media/tyrannosaurus-rex/deck.html",
+    "pdfUrl": "/static-media/tyrannosaurus-rex/deck.pdf",
+    "gammaUrl": "https://gamma.app/docs/nfv8md2pwk3zwbv",
+    "exportUrl": "https://assets.api.gamma.app/export/pdf/nfv8md2pwk3zwbv/746c611adf2e92f2102866ce1e7bcc6b/Tyrannosaurus-Rex.pdf",
+    "summary": {
+      "title": "霸王龙 展示页",
+      "sections": [
+        {
+          "title": "核心参数",
+          "facts": [
+            "白垩纪 · 肉食",
+            "体长约 12.3 米，体重约 8.4 吨",
+            "主要分布：北美洲"
+          ]
+        },
+        {
+          "title": "视觉建议",
+          "facts": [
+            "体型对比图",
+            "时代时间线",
+            "栖息地背景"
+          ]
+        },
+        {
+          "title": "讲述重点",
+          "facts": [
+            "霸王龙是史上最庞大且最著名的肉食性恐龙之一。它们拥有极其强大的咬合力，能够轻易咬碎猎物的骨头。前肢虽然短小，但依然具备强大的力量。",
+            "霸王龙的咬合力可达6吨，相当于一头大象的重量！"
+          ]
+        }
+      ]
+    }
+  },
+  "canva": {
+    "status": "demo",
+    "provider": "canva",
+    "title": "霸王龙 Canva 视觉卡片",
+    "posterUrl": "/static-media/tyrannosaurus-rex/poster.png",
+    "promptUrl": "/static-media/tyrannosaurus-rex/canva.json",
+    "importText": "霸王龙 / Tyrannosaurus rex\n时代：白垩纪\n食性：肉食\n体长：12.3米\n体重：8.4吨\n分布：北美洲\n简介：霸王龙是史上最庞大且最著名的肉食性恐龙之一。它们拥有极其强大的咬合力，能够轻易咬碎猎物的骨头。前肢虽然短小，但依然具备强大的力量。\n趣味知识：霸王龙的咬合力可达6吨，相当于一头大象的重量！",
+    "error": "Canva plugin flow prepared; attach exported editable URL when available."
+  },
+  "descript": {
+    "status": "skipped",
+    "provider": "descript",
+    "transcriptUrl": "/static-media/tyrannosaurus-rex/subtitles.json",
+    "error": "DESCRIPT_SOURCE_BASE_URL is not set; Descript imports require a public media URL"
+  }
+}
