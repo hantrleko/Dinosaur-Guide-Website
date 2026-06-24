@@ -1,34 +1,11 @@
 {
-  "status": "skipped",
-  "provider": "demo",
-  "reason": "GAMMA_API_KEY is not set",
-  "content": "迅猛龙（Velociraptor）\n时代：白垩纪\n食性：肉食\n体长：2米\n体重：0.015吨\n分布：亚洲\n简介：迅猛龙是一种小型而敏捷的驰龙类恐龙。它们大脑发达，视觉锐利，后肢的第二趾上长有一个像镰刀一样的大爪子，用于捕杀猎物。\n趣味：真实的迅猛龙体型只有火鸡大小，且全身覆盖着羽毛。",
-  "summary": {
-    "title": "迅猛龙 展示页",
-    "sections": [
-      {
-        "title": "核心参数",
-        "facts": [
-          "白垩纪 · 肉食",
-          "体长约 2 米，体重约 0.015 吨",
-          "主要分布：亚洲"
-        ]
-      },
-      {
-        "title": "视觉建议",
-        "facts": [
-          "体型对比图",
-          "时代时间线",
-          "栖息地背景"
-        ]
-      },
-      {
-        "title": "讲述重点",
-        "facts": [
-          "迅猛龙是一种小型而敏捷的驰龙类恐龙。它们大脑发达，视觉锐利，后肢的第二趾上长有一个像镰刀一样的大爪子，用于捕杀猎物。",
-          "真实的迅猛龙体型只有火鸡大小，且全身覆盖着羽毛。"
-        ]
-      }
-    ]
+  "generationId": "bdEqIKikGjw4qxVgIOVba",
+  "status": "completed",
+  "gammaId": "g_zqrvo4qknyf1sn3",
+  "gammaUrl": "https://gamma.app/docs/81wswckcsbne3qt",
+  "exportUrl": "https://assets.api.gamma.app/export/pdf/81wswckcsbne3qt/b455768a2426c12cef9b9aee8e8bff93/81wswckcsbne3qt.pdf",
+  "credits": {
+    "deducted": 60,
+    "remaining": 7543
   }
 }

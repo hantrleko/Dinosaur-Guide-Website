@@ -1,34 +1,11 @@
 {
-  "status": "skipped",
-  "provider": "demo",
-  "reason": "GAMMA_API_KEY is not set",
-  "content": "霸王龙（Tyrannosaurus rex）\n时代：白垩纪\n食性：肉食\n体长：12.3米\n体重：8.4吨\n分布：北美洲\n简介：霸王龙是史上最庞大且最著名的肉食性恐龙之一。它们拥有极其强大的咬合力，能够轻易咬碎猎物的骨头。前肢虽然短小，但依然具备强大的力量。\n趣味：霸王龙的咬合力可达6吨，相当于一头大象的重量！",
-  "summary": {
-    "title": "霸王龙 展示页",
-    "sections": [
-      {
-        "title": "核心参数",
-        "facts": [
-          "白垩纪 · 肉食",
-          "体长约 12.3 米，体重约 8.4 吨",
-          "主要分布：北美洲"
-        ]
-      },
-      {
-        "title": "视觉建议",
-        "facts": [
-          "体型对比图",
-          "时代时间线",
-          "栖息地背景"
-        ]
-      },
-      {
-        "title": "讲述重点",
-        "facts": [
-          "霸王龙是史上最庞大且最著名的肉食性恐龙之一。它们拥有极其强大的咬合力，能够轻易咬碎猎物的骨头。前肢虽然短小，但依然具备强大的力量。",
-          "霸王龙的咬合力可达6吨，相当于一头大象的重量！"
-        ]
-      }
-    ]
+  "generationId": "727S1lyjSvC2T8D83FnZE",
+  "status": "completed",
+  "gammaId": "g_4oxg0mbw3x8h5vf",
+  "gammaUrl": "https://gamma.app/docs/syy6vzckpjarmxl",
+  "exportUrl": "https://assets.api.gamma.app/export/pdf/syy6vzckpjarmxl/c65eed2b76649dff8da0f6daa5094c6a/Tyrannosaurus-Rex.pdf",
+  "credits": {
+    "deducted": 26,
+    "remaining": 7603
   }
 }

@@ -1,6 +1,6 @@
 {
-  "status": "skipped",
-  "provider": "descript",
-  "reason": "DESCRIPT_API_KEY is not set",
-  "intendedAudioUrl": "/static-media/stegosaurus/narration.mp3"
+  "job_id": "project-media-import-81cff168-210e-4f02-b246-5d64ab4b74f4",
+  "drive_id": "9523064e-e2aa-44a0-90a4-2e8537f421a4",
+  "project_id": "8df45849-3054-43e9-aebc-71fdbde358d8",
+  "project_url": "https://web.descript.com/8df45849-3054-43e9-aebc-71fdbde358d8"
 }

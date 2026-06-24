@@ -2,7 +2,7 @@
   "dinoId": "brachiosaurus",
   "nameCn": "腕龙",
   "nameLatin": "Brachiosaurus",
-  "generatedAt": "2026-06-24T04:08:38.064Z",
+  "generatedAt": "2026-06-24T06:14:02.629Z",
   "source": "static-media-v2",
   "narration": {
     "status": "success",
@@ -80,10 +80,13 @@
     "durationMs": 6308
   },
   "gamma": {
-    "status": "skipped",
-    "provider": "demo",
+    "status": "success",
+    "provider": "gamma",
     "title": "腕龙 展示页",
     "deckUrl": "/static-media/brachiosaurus/deck.html",
+    "pdfUrl": "/static-media/brachiosaurus/deck.pdf",
+    "gammaUrl": "https://gamma.app/docs/ry7jwuxp65cs09o",
+    "exportUrl": "https://assets.api.gamma.app/export/pdf/ry7jwuxp65cs09o/7db0266c915995890ca06a160624c159/Brachiosaurus.pdf",
     "summary": {
       "title": "腕龙 展示页",
       "sections": [
@@ -111,8 +114,7 @@
           ]
         }
       ]
-    },
-    "error": "GAMMA_API_KEY is not set; local HTML deck generated."
+    }
   },
   "canva": {
     "status": "demo",
@@ -228,13 +230,13 @@
         "animationUrl": "/static-media/brachiosaurus/actions/resting/clip.mp4"
       }
     ],
-    "error": "Canva plugin flow prepared; attach exported editable URL when available."
+    "error": "Canva connector attempted: Magic Design is not enabled in this team, and poster import returned invalid_file. Local poster and behavior clips are included; attach editable Canva URL when the account feature is enabled."
   },
   "descript": {
-    "status": "skipped",
+    "status": "success",
     "provider": "descript",
-    "transcriptUrl": "/static-media/brachiosaurus/subtitles.json",
-    "error": "DESCRIPT_API_KEY is not set"
+    "projectUrl": "https://web.descript.com/db7cfdcf-3a03-4aa1-9ca0-e44db26d79a0",
+    "transcriptUrl": "/static-media/brachiosaurus/subtitles.json"
   },
   "visual": {
     "behaviorClips": [

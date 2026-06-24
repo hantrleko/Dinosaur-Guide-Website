@@ -1,34 +1,11 @@
 {
-  "status": "skipped",
-  "provider": "demo",
-  "reason": "GAMMA_API_KEY is not set",
-  "content": "三角龙（Triceratops）\n时代：白垩纪\n食性：草食\n体长：9米\n体重：12吨\n分布：北美洲\n简介：三角龙是最大的角龙类恐龙，头部有三根长角和一个坚固的颈盾。这些特征主要用于防御顶级掠食者的攻击，也可能用于求偶展示。\n趣味：三角龙的头骨是已知陆地动物中最大的，几乎占据了体长的三分之一。",
-  "summary": {
-    "title": "三角龙 展示页",
-    "sections": [
-      {
-        "title": "核心参数",
-        "facts": [
-          "白垩纪 · 草食",
-          "体长约 9 米，体重约 12 吨",
-          "主要分布：北美洲"
-        ]
-      },
-      {
-        "title": "视觉建议",
-        "facts": [
-          "体型对比图",
-          "时代时间线",
-          "栖息地背景"
-        ]
-      },
-      {
-        "title": "讲述重点",
-        "facts": [
-          "三角龙是最大的角龙类恐龙，头部有三根长角和一个坚固的颈盾。这些特征主要用于防御顶级掠食者的攻击，也可能用于求偶展示。",
-          "三角龙的头骨是已知陆地动物中最大的，几乎占据了体长的三分之一。"
-        ]
-      }
-    ]
+  "generationId": "B4uExo8W3D3s42Bs1DTBU",
+  "status": "completed",
+  "gammaId": "g_ec5ool134uryiij",
+  "gammaUrl": "https://gamma.app/docs/dh99nk923mzdns4",
+  "exportUrl": "https://assets.api.gamma.app/export/pdf/dh99nk923mzdns4/0a29be78e94ebbc1e6df4422adc39877/Triceratops.pdf",
+  "credits": {
+    "deducted": 64,
+    "remaining": 7419
   }
 }

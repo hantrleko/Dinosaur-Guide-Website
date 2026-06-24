@@ -109,5 +109,7 @@
       "status": "success",
       "animationUrl": "/static-media/velociraptor/actions/resting/clip.mp4"
     }
-  ]
+  ],
+  "connectorAttempted": true,
+  "connectorError": "Canva connector attempted: Magic Design is not enabled in this team, and poster import returned invalid_file. Local poster and behavior clips are included; attach editable Canva URL when the account feature is enabled."
 }

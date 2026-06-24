@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T04:08:38.064Z",
+  "generatedAt": "2026-06-24T06:19:38.2515361Z",
   "source": "static-media-v2",
   "defaultDinoIds": [
     "tyrannosaurus-rex",
@@ -19,7 +19,7 @@
       "hasDeck": true,
       "hasCanva": true,
       "hasBehaviorClips": true,
-      "hasDescript": false
+      "hasDescript": true
     },
     "velociraptor": {
       "dinoId": "velociraptor",
@@ -30,18 +30,7 @@
       "hasDeck": true,
       "hasCanva": true,
       "hasBehaviorClips": true,
-      "hasDescript": false
-    },
-    "brachiosaurus": {
-      "dinoId": "brachiosaurus",
-      "nameCn": "腕龙",
-      "manifestUrl": "/static-media/brachiosaurus/manifest.json",
-      "hasNarration": true,
-      "hasDinoVoice": true,
-      "hasDeck": true,
-      "hasCanva": true,
-      "hasBehaviorClips": true,
-      "hasDescript": false
+      "hasDescript": true
     },
     "triceratops": {
       "dinoId": "triceratops",
@@ -52,7 +41,18 @@
       "hasDeck": true,
       "hasCanva": true,
       "hasBehaviorClips": true,
-      "hasDescript": false
+      "hasDescript": true
+    },
+    "brachiosaurus": {
+      "dinoId": "brachiosaurus",
+      "nameCn": "腕龙",
+      "manifestUrl": "/static-media/brachiosaurus/manifest.json",
+      "hasNarration": true,
+      "hasDinoVoice": true,
+      "hasDeck": true,
+      "hasCanva": true,
+      "hasBehaviorClips": true,
+      "hasDescript": true
     },
     "stegosaurus": {
       "dinoId": "stegosaurus",
@@ -63,7 +63,7 @@
       "hasDeck": true,
       "hasCanva": true,
       "hasBehaviorClips": true,
-      "hasDescript": false
+      "hasDescript": true
     },
     "spinosaurus": {
       "dinoId": "spinosaurus",
@@ -74,7 +74,7 @@
       "hasDeck": true,
       "hasCanva": true,
       "hasBehaviorClips": true,
-      "hasDescript": false
+      "hasDescript": true
     }
   }
 }

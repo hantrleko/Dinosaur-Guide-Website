@@ -1,6 +1,6 @@
 {
-  "status": "skipped",
-  "provider": "descript",
-  "reason": "DESCRIPT_API_KEY is not set",
-  "intendedAudioUrl": "/static-media/tyrannosaurus-rex/narration.mp3"
+  "job_id": "project-media-import-a3165ead-fde0-44c7-9f4d-0397c14b6004",
+  "drive_id": "9523064e-e2aa-44a0-90a4-2e8537f421a4",
+  "project_id": "3de317aa-e425-4056-b40e-a9766d1daccf",
+  "project_url": "https://web.descript.com/3de317aa-e425-4056-b40e-a9766d1daccf"
 }

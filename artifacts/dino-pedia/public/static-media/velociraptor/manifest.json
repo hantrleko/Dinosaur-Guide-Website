@@ -2,7 +2,7 @@
   "dinoId": "velociraptor",
   "nameCn": "迅猛龙",
   "nameLatin": "Velociraptor",
-  "generatedAt": "2026-06-24T04:08:38.064Z",
+  "generatedAt": "2026-06-24T06:14:02.629Z",
   "source": "static-media-v2",
   "narration": {
     "status": "success",
@@ -85,10 +85,13 @@
     "durationMs": 6308
   },
   "gamma": {
-    "status": "skipped",
-    "provider": "demo",
+    "status": "success",
+    "provider": "gamma",
     "title": "迅猛龙 展示页",
     "deckUrl": "/static-media/velociraptor/deck.html",
+    "pdfUrl": "/static-media/velociraptor/deck.pdf",
+    "gammaUrl": "https://gamma.app/docs/81wswckcsbne3qt",
+    "exportUrl": "https://assets.api.gamma.app/export/pdf/81wswckcsbne3qt/b455768a2426c12cef9b9aee8e8bff93/81wswckcsbne3qt.pdf",
     "summary": {
       "title": "迅猛龙 展示页",
       "sections": [
@@ -116,8 +119,7 @@
           ]
         }
       ]
-    },
-    "error": "GAMMA_API_KEY is not set; local HTML deck generated."
+    }
   },
   "canva": {
     "status": "demo",
@@ -233,13 +235,13 @@
         "animationUrl": "/static-media/velociraptor/actions/resting/clip.mp4"
       }
     ],
-    "error": "Canva plugin flow prepared; attach exported editable URL when available."
+    "error": "Canva connector attempted: Magic Design is not enabled in this team, and poster import returned invalid_file. Local poster and behavior clips are included; attach editable Canva URL when the account feature is enabled."
   },
   "descript": {
-    "status": "skipped",
+    "status": "success",
     "provider": "descript",
-    "transcriptUrl": "/static-media/velociraptor/subtitles.json",
-    "error": "DESCRIPT_API_KEY is not set"
+    "projectUrl": "https://web.descript.com/bf276127-a8c8-4b5b-9687-79f6154077c8",
+    "transcriptUrl": "/static-media/velociraptor/subtitles.json"
   },
   "visual": {
     "behaviorClips": [

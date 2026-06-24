@@ -2,7 +2,7 @@
   "dinoId": "spinosaurus",
   "nameCn": "棘龙",
   "nameLatin": "Spinosaurus",
-  "generatedAt": "2026-06-24T04:08:38.064Z",
+  "generatedAt": "2026-06-24T06:14:02.629Z",
   "source": "static-media-v2",
   "narration": {
     "status": "success",
@@ -80,10 +80,13 @@
     "durationMs": 5956
   },
   "gamma": {
-    "status": "skipped",
-    "provider": "demo",
+    "status": "success",
+    "provider": "gamma",
     "title": "棘龙 展示页",
     "deckUrl": "/static-media/spinosaurus/deck.html",
+    "pdfUrl": "/static-media/spinosaurus/deck.pdf",
+    "gammaUrl": "https://gamma.app/docs/fqj1jtcwvs6zo88",
+    "exportUrl": "https://assets.api.gamma.app/export/pdf/fqj1jtcwvs6zo88/46f58368dc2f1c5a219c20a22a52011c/Spinosaurus.pdf",
     "summary": {
       "title": "棘龙 展示页",
       "sections": [
@@ -111,8 +114,7 @@
           ]
         }
       ]
-    },
-    "error": "GAMMA_API_KEY is not set; local HTML deck generated."
+    }
   },
   "canva": {
     "status": "demo",
@@ -228,13 +230,13 @@
         "animationUrl": "/static-media/spinosaurus/actions/resting/clip.mp4"
       }
     ],
-    "error": "Canva plugin flow prepared; attach exported editable URL when available."
+    "error": "Canva connector attempted: Magic Design is not enabled in this team, and poster import returned invalid_file. Local poster and behavior clips are included; attach editable Canva URL when the account feature is enabled."
   },
   "descript": {
-    "status": "skipped",
+    "status": "success",
     "provider": "descript",
-    "transcriptUrl": "/static-media/spinosaurus/subtitles.json",
-    "error": "DESCRIPT_API_KEY is not set"
+    "projectUrl": "https://web.descript.com/45b0c2f9-1336-4daf-83bd-586411f5ff1b",
+    "transcriptUrl": "/static-media/spinosaurus/subtitles.json"
   },
   "visual": {
     "behaviorClips": [

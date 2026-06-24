@@ -1,6 +1,6 @@
 {
-  "status": "skipped",
-  "provider": "descript",
-  "reason": "DESCRIPT_API_KEY is not set",
-  "intendedAudioUrl": "/static-media/spinosaurus/narration.mp3"
+  "job_id": "project-media-import-ae49df63-d822-4628-8522-141e07d5318d",
+  "drive_id": "9523064e-e2aa-44a0-90a4-2e8537f421a4",
+  "project_id": "45b0c2f9-1336-4daf-83bd-586411f5ff1b",
+  "project_url": "https://web.descript.com/45b0c2f9-1336-4daf-83bd-586411f5ff1b"
 }

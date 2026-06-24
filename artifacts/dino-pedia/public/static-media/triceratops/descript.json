@@ -1,6 +1,6 @@
 {
-  "status": "skipped",
-  "provider": "descript",
-  "reason": "DESCRIPT_API_KEY is not set",
-  "intendedAudioUrl": "/static-media/triceratops/narration.mp3"
+  "job_id": "project-media-import-ef30321b-155d-46c0-8db6-bb8d971156c3",
+  "drive_id": "9523064e-e2aa-44a0-90a4-2e8537f421a4",
+  "project_id": "64d1de6c-6bb6-49ef-b7a8-c87fbfcf7384",
+  "project_url": "https://web.descript.com/64d1de6c-6bb6-49ef-b7a8-c87fbfcf7384"
 }

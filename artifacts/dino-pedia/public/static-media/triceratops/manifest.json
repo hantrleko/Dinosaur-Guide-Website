@@ -2,7 +2,7 @@
   "dinoId": "triceratops",
   "nameCn": "三角龙",
   "nameLatin": "Triceratops",
-  "generatedAt": "2026-06-24T04:08:38.064Z",
+  "generatedAt": "2026-06-24T06:14:02.629Z",
   "source": "static-media-v2",
   "narration": {
     "status": "success",
@@ -80,10 +80,13 @@
     "durationMs": 6044
   },
   "gamma": {
-    "status": "skipped",
-    "provider": "demo",
+    "status": "success",
+    "provider": "gamma",
     "title": "三角龙 展示页",
     "deckUrl": "/static-media/triceratops/deck.html",
+    "pdfUrl": "/static-media/triceratops/deck.pdf",
+    "gammaUrl": "https://gamma.app/docs/dh99nk923mzdns4",
+    "exportUrl": "https://assets.api.gamma.app/export/pdf/dh99nk923mzdns4/0a29be78e94ebbc1e6df4422adc39877/Triceratops.pdf",
     "summary": {
       "title": "三角龙 展示页",
       "sections": [
@@ -111,8 +114,7 @@
           ]
         }
       ]
-    },
-    "error": "GAMMA_API_KEY is not set; local HTML deck generated."
+    }
   },
   "canva": {
     "status": "demo",
@@ -228,13 +230,13 @@
         "animationUrl": "/static-media/triceratops/actions/resting/clip.mp4"
       }
     ],
-    "error": "Canva plugin flow prepared; attach exported editable URL when available."
+    "error": "Canva connector attempted: Magic Design is not enabled in this team, and poster import returned invalid_file. Local poster and behavior clips are included; attach editable Canva URL when the account feature is enabled."
   },
   "descript": {
-    "status": "skipped",
+    "status": "success",
     "provider": "descript",
-    "transcriptUrl": "/static-media/triceratops/subtitles.json",
-    "error": "DESCRIPT_API_KEY is not set"
+    "projectUrl": "https://web.descript.com/64d1de6c-6bb6-49ef-b7a8-c87fbfcf7384",
+    "transcriptUrl": "/static-media/triceratops/subtitles.json"
   },
   "visual": {
     "behaviorClips": [

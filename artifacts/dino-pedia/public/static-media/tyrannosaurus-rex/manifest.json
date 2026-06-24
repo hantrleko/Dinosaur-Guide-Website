@@ -2,7 +2,7 @@
   "dinoId": "tyrannosaurus-rex",
   "nameCn": "霸王龙",
   "nameLatin": "Tyrannosaurus rex",
-  "generatedAt": "2026-06-24T04:08:38.064Z",
+  "generatedAt": "2026-06-24T06:12:21.042Z",
   "source": "static-media-v2",
   "narration": {
     "status": "success",
@@ -90,10 +90,13 @@
     "durationMs": 7648
   },
   "gamma": {
-    "status": "skipped",
-    "provider": "demo",
+    "status": "success",
+    "provider": "gamma",
     "title": "霸王龙 展示页",
     "deckUrl": "/static-media/tyrannosaurus-rex/deck.html",
+    "pdfUrl": "/static-media/tyrannosaurus-rex/deck.pdf",
+    "gammaUrl": "https://gamma.app/docs/syy6vzckpjarmxl",
+    "exportUrl": "https://assets.api.gamma.app/export/pdf/syy6vzckpjarmxl/c65eed2b76649dff8da0f6daa5094c6a/Tyrannosaurus-Rex.pdf",
     "summary": {
       "title": "霸王龙 展示页",
       "sections": [
@@ -121,8 +124,7 @@
           ]
         }
       ]
-    },
-    "error": "GAMMA_API_KEY is not set; local HTML deck generated."
+    }
   },
   "canva": {
     "status": "demo",
@@ -238,13 +240,13 @@
         "animationUrl": "/static-media/tyrannosaurus-rex/actions/resting/clip.mp4"
       }
     ],
-    "error": "Canva plugin flow prepared; attach exported editable URL when available."
+    "error": "Canva connector attempted: Magic Design is not enabled in this team, and poster import returned invalid_file. Local poster and behavior clips are included; attach editable Canva URL when the account feature is enabled."
   },
   "descript": {
-    "status": "skipped",
+    "status": "success",
     "provider": "descript",
-    "transcriptUrl": "/static-media/tyrannosaurus-rex/subtitles.json",
-    "error": "DESCRIPT_API_KEY is not set"
+    "projectUrl": "https://web.descript.com/3de317aa-e425-4056-b40e-a9766d1daccf",
+    "transcriptUrl": "/static-media/tyrannosaurus-rex/subtitles.json"
   },
   "visual": {
     "behaviorClips": [

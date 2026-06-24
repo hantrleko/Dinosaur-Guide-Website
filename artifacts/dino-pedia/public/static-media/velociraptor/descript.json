@@ -1,6 +1,6 @@
 {
-  "status": "skipped",
-  "provider": "descript",
-  "reason": "DESCRIPT_API_KEY is not set",
-  "intendedAudioUrl": "/static-media/velociraptor/narration.mp3"
+  "job_id": "project-media-import-4354f137-2ab5-4f71-96fd-bc68ec7cb7a7",
+  "drive_id": "9523064e-e2aa-44a0-90a4-2e8537f421a4",
+  "project_id": "bf276127-a8c8-4b5b-9687-79f6154077c8",
+  "project_url": "https://web.descript.com/bf276127-a8c8-4b5b-9687-79f6154077c8"
 }
